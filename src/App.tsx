@@ -1,15 +1,19 @@
-import { useState } from 'react'
+
 import './App.css';
-import {useTranslation} from "react-i18next";
+
+import Navbar from './components/navbar/Navbar';
+import HomeComp from './components/homecomp/HomeComp';
+import ProjectsComp from './components/projectscomp/ProjectsComp';
 
 function App() {
-  const [count, setCount] = useState(0);
-    const { t } = useTranslation();
+  
+    
   return (
       <div className={`mt-6 base_button`}>
-          <p>{t('welcome')}</p>
-          <p>{t('description')}</p>
-
+          
+      <Navbar />
+      <HomeComp />
+      <ProjectsComp />
       </div>
   )
 }

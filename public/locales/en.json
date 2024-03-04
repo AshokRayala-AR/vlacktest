@@ -1,4 +1,20 @@
 {
-  "welcome": "Welcome to React",
-  "description": "This is an example of how to integrate i18n in a React project."
+  "nav-home": "home",
+  "nav-aboutus": "About Us",
+  "nav-features": "Features",
+  "nav-pricing": "Pricing",
+  "nav-faq": "FAQ",
+  "nav-blog": "Blog",
+  "nav-btn-contactus": "Contact Us",
+  "home-comp-header": "Building stellar websites for early startups",
+  "home-comp-description": "You don't need to worry about buliding websites, that's our vlack duty!!!",
+  "home-comp-btn-view-work": "View our work",
+  "home-comp-link-view-pricing": "View Pricing",
+  "project-comp-nav-header": "View our projects",
+  "project-comp-nav-link": "View more",
+  "project-comp-primarycard-header": "Workhub office webflow webflow design",
+  "project-comp-primarycard-description": "design patterns and our projects with updated techno for the world",
+  "project-comp-primarycard-link": "View Projects",
+  "project-comp-secondarycard-header": "Unisaas website design",
+  "project-comp-secondarycard-link": "View Portfolio"
 }
