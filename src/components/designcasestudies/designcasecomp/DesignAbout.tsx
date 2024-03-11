@@ -7,7 +7,7 @@ export default function DesignAboutProject() {
       <p className="text-base">{DesignProjectData[0].description}</p>
       <ul className="text-base">
         {DesignProjectData[0].list.map((item, index) => {
-          return <DataAboutList item={item} />;
+          return <DataAboutList item={item} key={index}/>;
         })}
       </ul>
     </div>

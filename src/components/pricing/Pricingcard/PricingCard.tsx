@@ -39,9 +39,9 @@ export default function PricingCard({ item, isSelected, onClick }) {
       </div>
       <ul className="flex flex-col gap-2">
         {item.list.map((listItem, index) => (
-          <li key={index} className="list-none text-sm">
+          <div key={index} className="list-none text-sm">
             <PricingList listItem={listItem} />
-          </li>
+          </div>
         ))}
       </ul>
       <button

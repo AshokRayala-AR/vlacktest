@@ -11,8 +11,8 @@ export default function PorfolioCardWrapper() {
       </ul>
 
       <div className="grid grid-cols-2 gap-x-5 gap-y-14 ">
-        {PortfolioData.map((item) => {
-          return <PortfolioCard item={item} />;
+        {PortfolioData.map((item,index) => {
+          return <PortfolioCard item={item} key={index}/>;
         })}
       </div>
     </div>

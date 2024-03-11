@@ -7,7 +7,7 @@ export default function DesignHowWeDo() {
       <p className="text-base">{DesignProjectData[1].description}</p>
       <ul className="text-base">
         {DesignProjectData[1].list.map((item, index) => {
-            return <DesignAboutList item={ item} />
+            return <DesignAboutList item={ item} key={index}/>
         })}
       </ul>
     </div>
