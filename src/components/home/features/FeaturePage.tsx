@@ -1,9 +1,8 @@
 import FeatureCard from "./FeatureCard.tsx";
-import { Data } from "./FeaturesData.tsx";
 // import z from 'zod';
 
 function FeaturePage() {
-    
+
     // const bhargva = z.object({
     //     username: z.string().max(10, { message: "can not be more than 10 letters" }).min(5),
     //     password: z.string().regex(""),

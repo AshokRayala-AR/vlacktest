@@ -9,16 +9,16 @@ import Portfolio from "./components/portfolio/Portfolio.tsx";
 import Pricing from "./components/pricing/Pricing.tsx";
 import Features from "./components/Features/Features.tsx";
 import Readblog from "./components/readblog/Readblog.tsx";
-import HowWeWorkPage from "./components/home/howwework/HowWeWorkPage.tsx";
 import Footer from "./components/pricing/footer/Footer.tsx";
 import NavBar from "./components/pricing/navbar/NavBar.tsx";
+import Home from "./components/home/Home.tsx";
 
 function App() {
   return (
 <BrowserRouter>
     <NavBar/>
     <Routes>
-        <Route path={'/'} element={<HowWeWorkPage/>}/>
+        <Route path={'/'} element={<Home/>}/>
         <Route path={'/Blogs'} element={<Blog/>}/>
         <Route path={'/Contact'} element={<ContactUs/>}/>
         <Route path={'/policy'} element={<Policy/>}/>
