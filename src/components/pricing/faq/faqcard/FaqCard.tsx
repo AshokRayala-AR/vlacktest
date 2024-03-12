@@ -1,10 +1,11 @@
+
 export default function AccordionItem({
     title,
     content,
     isActive,
     onClick,
     indexCount,
-  }) {
+  }:any) {
     return (
       <div className="border-b border-gray-200 ">
         <div
@@ -38,4 +39,3 @@ export default function AccordionItem({
       </div>
     );
   }
-  

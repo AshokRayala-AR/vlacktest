@@ -1,11 +1,9 @@
-import { useTranslation } from "react-i18next";
-import i18n from 'i18next';
 import {data} from './HowWeWorkData.tsx';
 
 export default function HowWeWorkPage () {
-    const {t} = useTranslation();
+
      return (
-        <div className="mainpage bg-customwhite flex justify-center items-start h-screen space-x-4  flex justify-center items-center">
+        <div className="mainpage bg-customwhite h-screen space-x-4  flex justify-center items-center">
             <div className=" flex justify-center items-start gap-8">
             <div className=" w-2/6 text-left ">
 
@@ -14,7 +12,7 @@ export default function HowWeWorkPage () {
                 <a href = "#"  className=" text-customblue p-2 ">get in touch with us &#8594; </a>
 
             </div>
-            <div className=" w-3/6 gap-y-4 grid grid-cols-2 gap-y-8">
+            <div className=" w-3/6 gap-y-4 grid grid-cols-2 ">
                 {data.map(item => (
                     <div key={item.id} className="text-left  " >
                         <h1 className="text-2xl p-2">{item.id}</h1>

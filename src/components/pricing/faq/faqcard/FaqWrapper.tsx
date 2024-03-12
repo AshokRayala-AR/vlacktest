@@ -7,7 +7,7 @@ import FaqCardHeader from "./FaqCardHeader";
 export default function Accordion() {
   const [activeItem, setActiveItem] = useState(null);
 
-  const toggleAccordion = (index) => {
+  const toggleAccordion = (index:any) => {
     setActiveItem(index === activeItem ? null : index);
   };
 
