@@ -25,7 +25,7 @@ function FeaturePage() {
     // bhargva.parse(data);
 
     return (
-        <div className={'bg-[#F4F6FC] flex flex-col justify-center items-center '}>
+        <div className={'bg-[#F4F6FC] flex flex-col justify-center items-center py-20'}>
 
             <div className="w-96 text-center align-center  ">
                 <small className="font-medium">Features</small>
