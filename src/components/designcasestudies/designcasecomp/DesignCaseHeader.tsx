@@ -1,8 +1,8 @@
 export default function DesignHeader() {
   return (
-    <div className="text-left flex flex-col gap-1 pr-8">
+    <div className="text-left flex flex-col gap-1 lg:pr-8">
       <p className="text-base font-semibold">Web design and development</p>
-      <h1 className="text-5xl font-semibold leading-[64px] line-clamp-2 w-3/6">
+      <h1 className="text-3xl lg:text-4xl font-semibold lg:leading-[52px]  lg:w-3/6">
         Finsweet Design case studies
       </h1>
       <p className="text-base">

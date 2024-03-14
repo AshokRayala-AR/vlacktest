@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import AccordionItem from "./FaqCard";
 import FaqCardHeader from "./FaqCardHeader";
 // AccordionItem component
@@ -7,7 +7,7 @@ import FaqCardHeader from "./FaqCardHeader";
 export default function Accordion() {
   const [activeItem, setActiveItem] = useState(null);
 
-  const toggleAccordion = (index:any) => {
+  const toggleAccordion = (index: any) => {
     setActiveItem(index === activeItem ? null : index);
   };
 
@@ -40,11 +40,11 @@ export default function Accordion() {
   ];
 
   return (
-    <div className="flex justify-center items-start pb-16">
-      <div className="w-2/6  text-left">
+    <div className="flex flex-col items-center justify-center max-w-screen gap-y-8 lg:flex-row lg:justify-between lg:items-start ">
+      <div className="w-full text-center lg:w-3/6  lg:text-left">
         <FaqCardHeader />
       </div>
-      <div className="w-3/6 ">
+      <div className="w-full  lg:w-4/6 lg:p-0">
         {accordionData.map((item, index) => (
           <AccordionItem
             key={index}
@@ -53,6 +53,7 @@ export default function Accordion() {
             content={item.content}
             isActive={index === activeItem}
             onClick={() => toggleAccordion(index)}
+            className="border border-green-500"
           />
         ))}
       </div>

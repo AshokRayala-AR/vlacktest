@@ -1,6 +1,6 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { z } from "zod";
+import { string, z } from "zod";
 const schema = z.object({
   name: z.string().min(3).max(20),
   email: z.string().email(),
@@ -27,26 +27,26 @@ export default function ContactUsComponent() {
     reset();
   };
   return (
-    <div className="flex flex-col  gap-10">
-      <div className="flex flex-col justify-center items-center gap-2 ">
-        <h1 className="text-5xl font-semibold mb-2">Contact Us</h1>
-        <p className="text-base text-center w-2/6">
+    <div className="flex flex-col gap-4 md:gap-10">
+      <div className="flex flex-col justify-center items-center gap-2 p-6">
+        <h1 className="text-3xl lg:text-5xl font-semibold mb-2">Contact Us</h1>
+        <p className="text-base text-center lg:w-2/6">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
           eiusmod tempor incididunt ut labore.
         </p>
       </div>
 
       <div className="flex justify-center items-center ">
-        <div className="w-[961px] bg-[#F4F6FC] rounded-md">
+        <div className="w-screen md:max-w-[961px] bg-[#F4F6FC] rounded-md">
           <form
             onSubmit={handleSubmit(onSubmit)}
-            className="text-[#000000] p-[77px]"
+            className="text-[#000000] p-6 md:p-[77px]"
           >
-            <div className="mb-4 grid grid-cols-2 gap-4">
-              <div className="flex flex-col gap-2 relative">
+            <div className="grid grid-cols-1 mb-4 sm:grid sm:grid-cols-2 gap-4">
+              <div className="flex flex-col gap-2 relative ">
                 <label
                   htmlFor="name"
-                  className=" text-[#000000] block text-lg font-medium "
+                  className=" text-[#000000] block text-base md:text-lg font-medium "
                 >
                   Name
                 </label>
@@ -55,7 +55,7 @@ export default function ContactUsComponent() {
                   type="text"
                   id="name"
                   placeholder="Enter Your Name"
-                  className="px-[32px] py-[18px] text-base placeholder-black  w-full border bg-transparent outline-none"
+                  className="py-2  md:py-[18px] text-base placeholder-black   border bg-transparent outline-none"
                   style={{
                     borderRadius: "8px",
                     border: "1px solid rgba(0, 0, 0, 0.12)",
@@ -70,7 +70,7 @@ export default function ContactUsComponent() {
               <div className="flex flex-col gap-2 relative">
                 <label
                   htmlFor="email"
-                  className=" text-[#000000] block text-lg font-medium text"
+                  className=" text-[#000000] block text-base md:text-lg font-medium text"
                 >
                   Email
                 </label>
@@ -79,7 +79,7 @@ export default function ContactUsComponent() {
                   type="email"
                   id="email"
                   placeholder="Enter Your Email"
-                  className=" px-[32px] py-[18px] placeholder-black w-full border bg-transparent outline-none"
+                  className=" py-2 md:py-[18px] placeholder-black  border bg-transparent outline-none"
                   style={{
                     borderRadius: "8px",
                     border: "1px solid rgba(0, 0, 0, 0.12)",
@@ -93,11 +93,11 @@ export default function ContactUsComponent() {
               </div>
             </div>
 
-            <div className="mb-4 grid grid-cols-2 gap-4">
+            <div className="mb-4 grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div className="flex flex-col gap-2 relative">
                 <label
                   htmlFor="context"
-                  className=" text-[#000000] block text-lg font-medium "
+                  className=" text-[#000000] block text-base md:text-lg font-medium "
                 >
                   Context
                 </label>
@@ -106,7 +106,7 @@ export default function ContactUsComponent() {
                   type="text"
                   id="context"
                   placeholder="Provide Context"
-                  className="px-[32px] py-[18px] placeholder-black mt-1  w-full border bg-transparent outline-none"
+                  className="py-2 md:py-[18px] placeholder-black mt-1 border bg-transparent outline-none"
                   style={{
                     borderRadius: "8px",
                     border: "1px solid rgba(0, 0, 0, 0.12)",
@@ -121,7 +121,7 @@ export default function ContactUsComponent() {
               <div className="flex flex-col gap-2 relative">
                 <label
                   htmlFor="subject"
-                  className=" text-[#000000] block text-lg font-medium "
+                  className=" text-[#000000] block text-base md:text-lg font-medium "
                 >
                   Subject
                 </label>
@@ -130,7 +130,7 @@ export default function ContactUsComponent() {
                   type="text"
                   id="subject"
                   placeholder="Select Subject"
-                  className="px-[32px] py-[18px] placeholder-black mt-1 w-full border bg-transparent outline-none "
+                  className="py-2 md:py-[18px] placeholder-black mt-1  border bg-transparent outline-none "
                   style={{
                     borderRadius: "8px",
                     border: "1px solid rgba(0, 0, 0, 0.12)",
@@ -147,7 +147,7 @@ export default function ContactUsComponent() {
             <div className="flex flex-col gap-2 relative">
               <label
                 htmlFor="message"
-                className=" text-[#000000] block text-lg font-medium "
+                className=" text-[#000000] block text-base md:text-lg font-medium "
               >
                 Message
               </label>
@@ -155,7 +155,8 @@ export default function ContactUsComponent() {
                 {...register("message")}
                 id="message"
                 placeholder="Write your question here"
-                rows="3"
+                rows='2'
+                md:rows="3"
                 cols="20"
                 className="px-[32px] py-[18px]  placeholder-black mt-1  w-full border rounded-md resize-none h-2/6 bg-transparent  outline-none"
                 style={{
