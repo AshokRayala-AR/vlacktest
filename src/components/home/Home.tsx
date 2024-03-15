@@ -1,12 +1,17 @@
 import HowWeWorkPage from "./howwework/HowWeWorkPage.tsx";
-import Features from "../Features/Features.tsx";
+import FeaturePage from "./features/FeaturePage.tsx";
 import Faq from "../pricing/faq/Faq.tsx";
+import ClientPage from "./clients/ClientPage.tsx";
+import SendInquiryPage from "./inquiry/SendInquirypage.tsx";
+
 
 const Home =()=>{
     return(
-        <div>
+        <div >
             <HowWeWorkPage/>
-            <Features/>
+            <FeaturePage/>
+            <ClientPage />
+            <SendInquiryPage />
             <Faq/>
         </div>
     )
