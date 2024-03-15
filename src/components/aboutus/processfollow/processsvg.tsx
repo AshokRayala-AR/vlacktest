@@ -8,8 +8,8 @@
 const SVGComponent = () => (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
+      width={window.innerWidth < 768 ? "16" : "24"}
+      height={window.innerWidth < 768 ? "16" : "24"} 
       viewBox="0 0 24 24"
       fill="none"
       
