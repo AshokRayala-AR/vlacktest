@@ -1,4 +1,3 @@
-
 import PricingList from "./PricingList";
 export default function PricingCard({ item, isSelected, onClick }) {
   const handleClick = () => {
@@ -9,7 +8,7 @@ export default function PricingCard({ item, isSelected, onClick }) {
     <div
       className={`flex flex-col gap-10 py-10 pl-8 pr-14 rounded-[12px] shadow-md cursor-pointer  ${
         isSelected ? "bg-[#1C1E53] " : "bg-[#F4F6FC] text-black"
-      }`}
+      } z-0`}
       style={{
         minWidth: "260px",
         maxWidth: "350px",

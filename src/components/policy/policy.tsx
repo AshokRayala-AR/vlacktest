@@ -2,7 +2,7 @@ import PolicyContext from "./policypage/PolicyContext";
 
 export default function Policy() {
   return (
-    <div className="px-20 ">
+    <div className={`main_head`}>
       <PolicyContext />
     </div>
   );

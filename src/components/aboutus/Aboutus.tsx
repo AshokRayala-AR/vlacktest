@@ -5,16 +5,16 @@ import BenefitsPage from "./benefits/BenefitsPage";
 import TeamPage from "./team/TeamPage";
 import OurDesignPage from "./ourdesign/OurDesignPage";
 
-function Aboutus () {
-    return (
-        <>
-        <OurDesignPage />
-        <WhoWeArePage />
-        <ProcessPage />
-        <OurMissionPage />
-        <BenefitsPage />
-        <TeamPage />
-        </>
-    )
+function Aboutus() {
+  return (
+    <div className={`main_head`}>
+      <OurDesignPage />
+      <WhoWeArePage />
+      <ProcessPage />
+      <OurMissionPage />
+      <BenefitsPage />
+      <TeamPage />
+    </div>
+  );
 }
 export default Aboutus;

@@ -25,11 +25,11 @@ function OurMissionPage () {
       <p className="text-base">{Data[1].content}</p>
     </div>
     <div className="cover p-12 no-repeat md:w-2/6 py-10 md:order-1">
-      <img src={pic4} className="w-full h-[250px] md:max-h-full md:max-h-full md:w-[500px] m-auto object-cover object-center" alt="pic4" />
+      <img src={pic4} className="w-full h-[250px] md:max-h-full md:w-[500px] m-auto object-cover object-center" alt="pic4" />
     </div>
   </div>
     </div>
-    
+
     )
 }
 export default OurMissionPage;

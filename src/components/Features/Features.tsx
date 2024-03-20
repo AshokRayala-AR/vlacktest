@@ -1,13 +1,13 @@
-import ClientPage from "./client/ClientPage"
-import WorkingBenefitsPage from "./workingbenefits/WorkingBenefitsPage"
+import ClientPage from "./client/ClientPage";
+import WorkingBenefitsPage from "./workingbenefits/WorkingBenefitsPage";
 
-function Features () {
-    return (
-        <>
-        <WorkingBenefitsPage />
-        <ClientPage />
-        </>
-    ) 
+function Features() {
+  return (
+    <div className={`main_head`}>
+      <WorkingBenefitsPage />
+      <ClientPage />
+    </div>
+  );
 }
 
 export default Features;

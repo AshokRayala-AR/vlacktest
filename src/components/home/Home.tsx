@@ -4,17 +4,15 @@ import Faq from "../pricing/faq/Faq.tsx";
 import ClientPage from "./clients/ClientPage.tsx";
 import SendInquiryPage from "./inquiry/SendInquirypage.tsx";
 
-
-const Home =()=>{
-    return(
-        <div >
-            <HowWeWorkPage/>
-            <FeaturePage/>
-            <ClientPage />
-            <SendInquiryPage />
-            <Faq/>
-        </div>
-    )
-
-}
+const Home = () => {
+  return (
+    <div className={`main_head`}>
+      <HowWeWorkPage />
+      <FeaturePage />
+      <ClientPage />
+      <SendInquiryPage />
+      <Faq />
+    </div>
+  );
+};
 export default Home;

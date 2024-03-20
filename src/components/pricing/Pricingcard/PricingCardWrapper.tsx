@@ -5,7 +5,7 @@ import PricingData from "./PricingData";
 export default function PricingCardWrapper() {
   const [selectedCardIndex, setSelectedCardIndex] = useState(1);
 
-  const handleCardClick = (index) => {
+  const handleCardClick = (index: number) => {
     setSelectedCardIndex(index);
   };
 

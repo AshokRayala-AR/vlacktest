@@ -1,6 +1,5 @@
-
 import "./App.css";
-import {BrowserRouter, Route, Routes} from "react-router-dom";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Aboutus from "./components/aboutus/Aboutus.tsx";
 import Blog from "./components/blog/Blog.tsx";
 import ContactUs from "./components/contactus/ContactUs.tsx";
@@ -15,21 +14,21 @@ import Home from "./components/home/Home.tsx";
 
 function App() {
   return (
-<BrowserRouter>
-    <NavBar/>
-    <Routes>
-        <Route path={'/'} element={<Home/>}/>
-        <Route path={'/Blogs'} element={<Blog/>}/>
-        <Route path={'/Contact'} element={<ContactUs/>}/>
-        <Route path={'/policy'} element={<Policy/>}/>
-        <Route path={'/portfolio'} element={<Portfolio/>}/>
-        <Route path={'/pricing'} element={<Pricing/>}/>
-        <Route path={'/feature'} element={<Features/>}/>
-        <Route path={'/ReadBlog'} element={<Readblog/>}/>
-        <Route path={'/about'} element={<Aboutus/>}/>
-    </Routes>
-    <Footer/>
-</BrowserRouter>
+    <BrowserRouter>
+      <NavBar />
+      <Routes>
+        <Route path={"/"} element={<Home />} />
+        <Route path={"/Blogs"} element={<Blog />} />
+        <Route path={"/Contact"} element={<ContactUs />} />
+        <Route path={"/policy"} element={<Policy />} />
+        <Route path={"/portfolio"} element={<Portfolio />} />
+        <Route path={"/pricing"} element={<Pricing />} />
+        <Route path={"/feature"} element={<Features />} />
+        <Route path={"/ReadBlog"} element={<Readblog />} />
+        <Route path={"/about"} element={<Aboutus />} />
+      </Routes>
+      <Footer />
+    </BrowserRouter>
   );
 }
 

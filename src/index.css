@@ -7,4 +7,7 @@
     .base_button {
         @apply p-3
     }
+    .main_head {
+        @apply mt-[100px]
+    }
 }

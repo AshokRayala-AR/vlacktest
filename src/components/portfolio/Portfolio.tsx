@@ -3,7 +3,7 @@ import PortfolioHeader from "./portfoliopage/PortfolioHeader";
 
 export default function Portfolio() {
   return (
-    <div className="p-20">
+    <div className={`main_head`}>
       <PortfolioHeader />
       <PorfolioCardWrapper />
     </div>
