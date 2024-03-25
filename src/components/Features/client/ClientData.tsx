@@ -1,7 +1,7 @@
 import feature1 from '../../../assets/images/feature1.png';
 import feature2 from '../../../assets/images/feature2.png';
 import feature3 from '../../../assets/images/feature3.png';
-import feature4 from '../../../assets/images/feature4.png';
+
 
 
 export const ClientData = [
