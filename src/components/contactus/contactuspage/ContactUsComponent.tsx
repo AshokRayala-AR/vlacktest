@@ -1,6 +1,6 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { string, z } from "zod";
+import { z } from "zod";
 const schema = z.object({
   name: z.string().min(3).max(20),
   email: z.string().email(),
@@ -22,7 +22,7 @@ export default function ContactUsComponent() {
   } = useForm<FormFields>({
     resolver: zodResolver(schema),
   });
-  const onSubmit = (data) => {
+  const onSubmit = (data: any) => {
     console.log(data);
     reset();
   };
@@ -155,9 +155,8 @@ export default function ContactUsComponent() {
                 {...register("message")}
                 id="message"
                 placeholder="Write your question here"
-                rows='2'
-                md:rows="3"
-                cols="20"
+                rows={2}
+                cols={20}
                 className="px-[32px] py-[18px]  placeholder-black mt-1  w-full border rounded-md resize-none h-2/6 bg-transparent  outline-none"
                 style={{
                   borderRadius: "8px",

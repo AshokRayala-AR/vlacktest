@@ -31,7 +31,7 @@ export default function PricingCard({ item, isSelected, onClick }: any) {
           <p className="text-sm ">{item.description}</p>
         </div>
         <ul className="flex flex-col gap-2 ">
-          {item.list.map((listItem, index) => (
+          {item.list.map((listItem: any, index: number) => (
             <div key={index} className="list-none text-sm">
               <PricingList listItem={listItem} />
             </div>

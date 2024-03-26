@@ -1,4 +1,4 @@
-export default function PortfolioCard({ item }) {
+export default function PortfolioCard({ item }: any) {
   return (
     <div className="flex flex-col gap-2 items-center">
       <div className=" ">
