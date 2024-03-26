@@ -1,7 +1,7 @@
 import NavBarCard from "./navbarcard/NavBarCard";
 export default function NavBar() {
   return (
-    <div>
+    <div className={``}>
       <NavBarCard />
     </div>
   );

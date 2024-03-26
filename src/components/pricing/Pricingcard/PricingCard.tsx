@@ -9,6 +9,7 @@ export default function PricingCard({ item, isSelected, onClick }) {
       className={`p-5 rounded-[12px] shadow-md cursor-pointer ${
         isSelected ? "bg-[#1C1E53] " : "bg-[#F4F6FC] text-black"
       } flex flex-col gap-10 md:w-full  md:p-3 md:pt-5 lg:py-10 lg:pl-8 lg:pr-14 `}
+      } z-0`}
       style={{
         minWidth: "260px",
         // maxWidth: "350px",

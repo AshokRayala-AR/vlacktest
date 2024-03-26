@@ -1,28 +1,19 @@
 import HowWeWorkPage from "./howwework/HowWeWorkPage.tsx";
-// import Features from "../Features/Features.tsx";
+
+import FeaturePage from "./features/FeaturePage.tsx";
 import Faq from "../pricing/faq/Faq.tsx";
-import WelcomePage from "./welcome/WelcomePage.tsx";
-import ViewProjects from "./viewprojects/ViewProjects.tsx";
-// import BlogCard from "../blog/blogpage/BlogCards.tsx";
-import HomeBlog from "./homeblog/HomeBlog.tsx";
+import ClientPage from "./clients/ClientPage.tsx";
+import SendInquiryPage from "./inquiry/SendInquirypage.tsx";
 
 const Home = () => {
   return (
-    <>
-      <WelcomePage />
-      <div className="">
-        <HowWeWorkPage />
-      </div>
-      <div className="p-5 lg:px-24 lg:pt-20 md:px-14 md:pt-10 ">
-        <ViewProjects />
-      </div>
-      <div className="p-5 lg:px-24 lg:pt-20 md:px-14 md:pt-10">
-        <Faq />
-      </div>
-      <div className="p-5 lg:px-24 lg:pt-20 md:px-14 md:pt-10">
-        <HomeBlog />
-      </div>
-    </>
+    <div className={`main_head`}>
+      <HowWeWorkPage />
+      <FeaturePage />
+      <ClientPage />
+      <SendInquiryPage />
+      <Faq />
+    </div>
   );
 };
 export default Home;
