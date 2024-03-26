@@ -1,9 +1,10 @@
+import {  useNavigate } from "react-router-dom";
 import PricingList from "./PricingList";
 export default function PricingCard({ item, isSelected, onClick }: any) {
   const handleClick = () => {
     onClick();
   };
-
+  const navigate = useNavigate();
   return (
     <div
       className={`p-5 rounded-[12px] shadow-md cursor-pointer ${
@@ -11,7 +12,7 @@ export default function PricingCard({ item, isSelected, onClick }: any) {
       } flex flex-col gap-10 md:w-full md:p-3 md:pt-5 lg:py-10 lg:pl-8 lg:pr-14 `}
       style={{
         minWidth: "260px",
-        // maxWidth: "350px",
+
         transition: "transform 0.2s,",
       }}
       onMouseEnter={(e) => {
@@ -50,6 +51,7 @@ export default function PricingCard({ item, isSelected, onClick }: any) {
           className={`px-8 py-3 max ${
             isSelected ? "bg-[#FCD980]" : "bg-black text-white"
           }  text-black rounded-full`}
+          onClick={() => navigate("/contact")}
         >
           {item.btnDescription}
         </button>

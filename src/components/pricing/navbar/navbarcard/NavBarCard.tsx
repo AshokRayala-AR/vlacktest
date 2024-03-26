@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import { useNavigate } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import Logo from "../../../../assets/images/logoVlack.png";
 export default function Navbar() {
   const navigate = useNavigate();
@@ -15,7 +15,9 @@ export default function Navbar() {
           </div>
         </div>
         <div>
-          <ul className="flex justify-center self-center items-center gap-8 h-full ">
+
+          <ul className="flex justify-center self-center items-center gap-8 h-full">
+            <NavLink className={`hover:cursor-pointer `} to="/">
             <li
               className={`hover:cursor-pointer `}
               onClick={() => {
@@ -23,50 +25,30 @@ export default function Navbar() {
               }}
             >
               {t("nav-home")}
-            </li>
-            <li
-              className={`hover:cursor-pointer w-fit`}
-              onClick={() => {
-                navigate("/about");
-              }}
-            >
+            </NavLink>
+            <NavLink className={`hover:cursor-pointer w-fit`} to="/about">
               {t("nav-aboutus")}
-            </li>
-            <li className={`hover:cursor-pointer`}>{t("nav-features")}</li>
-            <li
-              className={`hover:cursor-pointer`}
-              onClick={() => {
-                navigate("pricing");
-              }}
-            >
+            </NavLink>
+            <NavLink to="/features" className={`hover:cursor-pointer`}>
+              {t("nav-features")}
+            </NavLink>
+            <NavLink to="/pricing" className={`hover:cursor-pointer`}>
               {t("nav-pricing")}
-            </li>
-            <li
-              className={`hover:cursor-pointer py-2`}
-              onClick={() => {
-                navigate("faq");
-              }}
-            >
+            </NavLink>
+            <NavLink to="/faq" className={`hover:cursor-pointer py-2`}>
               {t("nav-faq")}
-            </li>
-            <li
-              className={`hover:cursor-pointer`}
-              onClick={() => {
-                navigate("blogs");
-              }}
-            >
+            </NavLink>
+            <NavLink to="/blogs" className={`hover:cursor-pointer`}>
               {t("nav-blog")}
-            </li>
-            <li>
+            </NavLink>
+            <NavLink to="/contact">
               <button
                 className="px-8 py-2 border border-white rounded-full"
-                onClick={() => {
-                  navigate("contact");
-                }}
+                onClick={() => navigate("/contact")}
               >
                 {t("nav-btn-contactus")}
               </button>
-            </li>
+            </NavLink>
           </ul>
         </div>
       </nav>
