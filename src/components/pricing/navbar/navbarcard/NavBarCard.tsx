@@ -15,16 +15,16 @@ export default function Navbar() {
           </div>
         </div>
         <div>
-
           <ul className="flex justify-center self-center items-center gap-8 h-full">
             <NavLink className={`hover:cursor-pointer `} to="/">
-            <li
-              className={`hover:cursor-pointer `}
-              onClick={() => {
-                navigate("/");
-              }}
-            >
-              {t("nav-home")}
+              <li
+                className={`hover:cursor-pointer `}
+                onClick={() => {
+                  navigate("/");
+                }}
+              >
+                {t("nav-home")}
+              </li>
             </NavLink>
             <NavLink className={`hover:cursor-pointer w-fit`} to="/about">
               {t("nav-aboutus")}

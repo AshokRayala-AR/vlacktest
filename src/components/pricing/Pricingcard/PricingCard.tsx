@@ -1,4 +1,4 @@
-import {  useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import PricingList from "./PricingList";
 export default function PricingCard({ item, isSelected, onClick }: any) {
   const handleClick = () => {
@@ -7,19 +7,11 @@ export default function PricingCard({ item, isSelected, onClick }: any) {
   const navigate = useNavigate();
   return (
     <div
-      className={`p-5 rounded-[12px] shadow-md cursor-pointer ${
+      className={`p-5 rounded-[12px] duration-[2s] shadow-md cursor-pointer hover:z-50 transition-2 hover:scale-[1.3] ${
         isSelected ? "bg-[#1C1E53] " : "bg-[#F4F6FC] text-black"
-      } flex flex-col gap-10 md:w-full md:p-3 md:pt-5 lg:py-10 lg:pl-8 lg:pr-14 `}
+      } flex flex-col gap-10 md:w-full md:p-3 md:pt-5 lg:py-10 lg:pl-8 lg:pr-14  `}
       style={{
         minWidth: "260px",
-
-        transition: "transform 0.2s,",
-      }}
-      onMouseEnter={(e) => {
-        e.currentTarget.style.transform = "scale(1.02)";
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.transform = "scale(1)";
       }}
       onClick={handleClick}
     >
