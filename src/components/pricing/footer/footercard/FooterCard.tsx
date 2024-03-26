@@ -37,7 +37,7 @@ export default function FooterCard() {
       </div>
       <div className="flex justify-between px-12 py-3 items-center text-sm font-semibold shadow-lg">
         <div>
-          <p>Copyright 2021, Finsweet.com</p>
+          <p>Copyright 2021, vlacksolutions.com</p>
         </div>
         <div>
           <ul className="flex gap-5 ">
