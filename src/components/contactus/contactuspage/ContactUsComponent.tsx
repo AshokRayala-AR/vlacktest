@@ -55,7 +55,7 @@ export default function ContactUsComponent() {
                   type="text"
                   id="name"
                   placeholder="Enter Your Name"
-                  className="py-2  md:py-[18px] text-base placeholder-black   border bg-transparent outline-none"
+                  className="p-10  md:py-[18px] text-base placeholder-black   border bg-transparent outline-none"
                   style={{
                     borderRadius: "8px",
                     border: "1px solid rgba(0, 0, 0, 0.12)",
@@ -79,7 +79,7 @@ export default function ContactUsComponent() {
                   type="email"
                   id="email"
                   placeholder="Enter Your Email"
-                  className=" py-2 md:py-[18px] placeholder-black  border bg-transparent outline-none"
+                  className="p-10 py-2 md:py-[18px] placeholder-black  border bg-transparent outline-none"
                   style={{
                     borderRadius: "8px",
                     border: "1px solid rgba(0, 0, 0, 0.12)",
@@ -106,7 +106,7 @@ export default function ContactUsComponent() {
                   type="text"
                   id="context"
                   placeholder="Provide Context"
-                  className="py-2 md:py-[18px] placeholder-black mt-1 border bg-transparent outline-none"
+                  className=" p-10 py-2 md:py-[18px] placeholder-black mt-1 border bg-transparent outline-none"
                   style={{
                     borderRadius: "8px",
                     border: "1px solid rgba(0, 0, 0, 0.12)",
@@ -130,7 +130,7 @@ export default function ContactUsComponent() {
                   type="text"
                   id="subject"
                   placeholder="Select Subject"
-                  className="py-2 md:py-[18px] placeholder-black mt-1  border bg-transparent outline-none "
+                  className="p-10 py-2 md:py-[18px] placeholder-black mt-1  border bg-transparent outline-none "
                   style={{
                     borderRadius: "8px",
                     border: "1px solid rgba(0, 0, 0, 0.12)",
