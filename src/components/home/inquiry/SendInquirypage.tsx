@@ -19,7 +19,7 @@ function SendInquiryPage() {
     }
 
     return (
-        <div className="p-28 text-white">
+        <div className="p-28 text-white z-0">
     <div className="h-screen w-full flex items-center justify-center" style={{ backgroundImage: `url(${inquiryimage})`  }}>
     <div className="imgb bg-blue-800 bg-opacity-30 hidden lg:flex lg:flex-col lg:justify-center lg:items-center md:w-3/6 h-full lg:px-24  gap-6  md:text-left" >
     
@@ -35,15 +35,15 @@ function SendInquiryPage() {
             </div>
             <form onSubmit={handleSubmit(onSubmit)} className="p-2 w-full md:w-full flex flex-col gap-8 lg:px-16 md:w-[432px]">
                 <div className="flex flex-col gap-8 mt-4">
-                    <div className="relative">
+                    <div className="relative z-0">
                         <input {...register("Name")} type="text" placeholder="Your Name" className="rounded-lg bg-transparent p-4 border border-white border-opacity-5 outline-none w-full" />
                         {errors.Name && <p className="text-red-500 absolute">{errors.Name?.message}</p>}
                     </div>
-                    <div className="relative">
+                    <div className="relative z-0">
                         <input {...register("email")} type="email" placeholder="Email" className="rounded-lg bg-transparent p-4 border border-white border-opacity-5 outline-none w-full" />
                         {errors.email && <p className="text-red-500 absolute">{errors.email?.message}</p>}
                     </div>
-                    <div className="relative">
+                    <div className="relative z-0">
                         <input {...register("url")} type="text" placeholder="Paste Your Figma Design URL" className="rounded-lg bg-transparent p-4 border border-white border-opacity-5 outline-none w-full" />
                         {errors.url && <p className="text-red-500 absolute">{errors.url?.message}</p>}
                     </div>
