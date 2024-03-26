@@ -1,9 +1,9 @@
-import readblog1 from  '../../../assets/images/readblog1.jpeg';
+import readblog1 from "../../../assets/images/readblog1.jpeg";
 
-function ReadBlogHeader () {
-    return (
-        <div className="flex flex-col items-center justify-center p-8 gap-8">
-      <div className=" justify-center text-center w-[949px] px-10">
+function ReadBlogHeader() {
+  return (
+    <div className="flex flex-col items-center justify-center p-8 gap-8">
+      <div className=" justify-center text-center md:w-4/6 ">
         <h1 className="text-4xl font-bold mb-4">
           A UX Case Study on Creating a Studious Environment for Students
         </h1>
@@ -11,9 +11,13 @@ function ReadBlogHeader () {
       </div>
 
       <div className="">
-        <img src={readblog1} className="w-[1280px] h-[477px] object-cover mx-auto" alt="Blog header" />
+        <img
+          src={readblog1}
+          className="w-screen md:h-[477px] h-[200px] object-cover mx-auto"
+          alt="Blog header"
+        />
       </div>
     </div>
-    ) 
+  );
 }
 export default ReadBlogHeader;

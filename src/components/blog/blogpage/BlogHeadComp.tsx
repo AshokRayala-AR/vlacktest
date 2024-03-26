@@ -1,6 +1,6 @@
 export default function BlogHeader() {
   return (
-    <div className="flex flex-col text-center gap-6">
+    <div className="flex flex-col text-center gap-6 w-full">
       <h1 className="text-3xl font-semibold">
         A UX Case Study on Creating a Studious Environment for Students
       </h1>

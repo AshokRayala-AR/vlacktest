@@ -1,6 +1,6 @@
 export default function PolicyContext() {
   return (
-    <div className="flex w-4/6 m-auto">
+    <div className="w-full flex lg:w-4/6 m-auto p-5">
       <div className="flex flex-col">
         <div className="text-center  flex flex-col gap-3">
           <h1 className="text-5xl font-semibold leading-[64px]">

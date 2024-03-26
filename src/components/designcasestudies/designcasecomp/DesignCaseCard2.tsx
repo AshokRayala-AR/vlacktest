@@ -1,7 +1,7 @@
 export default function DesignCaseCard2() {
   return (
     <div>
-      <div className="inline-block px-14">
+      <div className="inline-block p-5 md:px-14">
         <img
           className="border-x-[40px] border-y-[68px] border-transparent bg-clip-border "
           style={{

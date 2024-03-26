@@ -17,8 +17,7 @@ const PricingData = [
     amount: "$399",
     amountSpan: "Multi Design",
     title: "Website Page",
-    description:
-      "When you’re ready to go beyond prototyping in Figma, Webflow’s ready to help.",
+    description: "When you’re ready to go beyond prototyping in Figma",
     btnDescription: "Get Started",
     list: [
       "All limited links",
