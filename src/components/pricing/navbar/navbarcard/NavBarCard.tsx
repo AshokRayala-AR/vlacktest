@@ -5,8 +5,8 @@ export default function Navbar() {
   const navigate = useNavigate();
   const { t } = useTranslation();
   return (
-    <div>
-      <nav className="bg-black text-white text-sm p-0 m-0 flex justify-between py-3 px-2 pr-8 fixed top-0 z-100">
+    <div className="">
+      <nav className="bg-black text-white text-sm p-0 m-0 flex justify-between py-3 px-2 pr-8 fixed top-0 z-50">
         <div className={`flex items-center`}>
           <img src={Logo} className=" h-[60%] md:w-[10%]" alt="pic4" />
           <div className={` text-red-500 ml-3 py-3`}>
@@ -15,8 +15,15 @@ export default function Navbar() {
           </div>
         </div>
         <div>
+
           <ul className="flex justify-center self-center items-center gap-8 h-full">
             <NavLink className={`hover:cursor-pointer `} to="/">
+            <li
+              className={`hover:cursor-pointer `}
+              onClick={() => {
+                navigate("/");
+              }}
+            >
               {t("nav-home")}
             </NavLink>
             <NavLink className={`hover:cursor-pointer w-fit`} to="/about">
