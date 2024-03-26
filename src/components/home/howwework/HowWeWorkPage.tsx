@@ -1,4 +1,3 @@
-
 import { data } from "./HowWeWorkData.tsx";
 import Icon from "./Icon.tsx";
 export default function HowWeWorkPage() {
@@ -19,9 +18,11 @@ export default function HowWeWorkPage() {
           {data.map((item) => (
             <div
               key={item.id}
-              className="text-center md:text-left shadow-sm rounded-md p-5"
+              className="text-center md:text-left shadow-sm rounded-md p-5 z-0"
             >
-              <Icon item={item} />
+              <div className={`z-10`}>
+                <Icon item={item} />
+              </div>
               <h2 className="text-2xl font-medium p-2">{item.title}</h2>
               <p className="text-balance p-2">{item.content}</p>
             </div>
@@ -32,7 +33,8 @@ export default function HowWeWorkPage() {
   );
 }
 
-{/* <div className="mainpage bg-customwhite min-h-screen space-x-4 flex flex-col justify-center items-center p-4 sm:flex-row md:space-x-0 md:gap-8">
+{
+  /* <div className="mainpage bg-customwhite min-h-screen space-x-4 flex flex-col justify-center items-center p-4 sm:flex-row md:space-x-0 md:gap-8">
     <div className="lg:flex justify-center items-start w-full sm:w-2/6 md:w-auto gap-8">
         <div className="text-left">
             <h1 className="font-bold text-3xl p-2">how we work</h1>
@@ -49,5 +51,5 @@ export default function HowWeWorkPage() {
             </div>
         ))}
     </div>
-</div> */}
-
+</div> */
+}

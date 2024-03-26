@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import WelcomeSvg from "./WelcomeSvg";
-export default function HomeComp() {
+export default function WelcomePage() {
   const { t } = useTranslation();
   return (
     <div className="text-white bg-[#1C1E53]  flex flex-col gap-6 w-full border border-salte-600 p-6 lg:flex-row justify-center items-center lg:p-24">
