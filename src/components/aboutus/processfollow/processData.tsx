@@ -2,23 +2,23 @@ export const Data = [
     
     {
         id: 1,
-        title: "Planning",
-        content: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio, laboriosam."
+        title: "abt-us-plan-ttl",
+        content: "abt-us-plan-desc"
     },
     {
         id: 2,
-        title: "Conception",
-        content: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio, laboriosam."
+        title: "abt-us-design-ttl",
+        content: "abt-us-design-desc"
     },
     {
         id: 3,
-        title: "Deploy",
-        content: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio, laboriosam."
+        title: "abt-us-dev-ttl",
+        content: "abt-us-dev-desc"
     },
     {
         id: 4,
-        title: "Development",
-        content: "Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio, laboriosam."
+        title: "abt-us-dm-ttl",
+        content: "abt-us-dm-desc"
     },
     
     

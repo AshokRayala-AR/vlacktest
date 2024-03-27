@@ -1,10 +1,10 @@
 import { useState } from "react";
 import AccordionItem from "./FaqCard";
 import FaqCardHeader from "./FaqCardHeader";
-// AccordionItem component
+import { useTranslation } from "react-i18next";
 
-// Main Accordion component
 export default function Accordion() {
+  const { t } = useTranslation();
   const [activeItem, setActiveItem] = useState(null);
 
   const toggleAccordion = (index: any) => {
@@ -13,29 +13,28 @@ export default function Accordion() {
 
   const accordionData = [
     {
-      title: "How much time does it take ?",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      title: t("faq-q-1"),
+      content: t("faq-a-1"),
     },
     {
-      title: "What is your class naming convention ?",
+      title: t("faq-q-2"),
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        t('faq-a-2'),
     },
     {
-      title: "How do we communicate ?",
+      title: t("faq-q-3"),
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      t('faq-a-3'),
     },
     {
-      title: "I have a bigger project. Can you handle it ?",
+      title: t("faq-q-4"),
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      t('faq-a-4'),
     },
     {
-      title: "What is your class naming convention ?",
+      title: t("faq-q-5"),
       content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      t('faq-a-5'),
     },
   ];
 

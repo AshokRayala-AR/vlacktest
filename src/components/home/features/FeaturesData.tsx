@@ -8,33 +8,33 @@ import RevisionIcon from "../../../assets/svg/RevisionIcon";
 export const Data = [
        {
         id : SupportIcon,
-        title: "Uses Client First",
-        content: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa eaque ducimus odit nobis obcaecati, nesciunt nemo. Exercitationem, corporis harum? Ad!"
+        title: "h-w-w-ft-ucf-ttl",
+        content: "h-w-w-ft-ucf-desc"
        },
        {
         id : RevisionIcon,
-        title: "Two Free Revision Round",
-        content: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa eaque ducimus odit nobis obcaecati, nesciunt nemo. Exercitationem, corporis harum? Ad!"
+        title: "h-w-w-ft-aa-ttl",
+        content: "h-w-w-ft-aa-desc"
        },
        {
         id : ResponsiveIcon,
-        title: "Template Customization",
-        content: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa eaque ducimus odit nobis obcaecati, nesciunt nemo. Exercitationem, corporis harum? Ad!"
+        title: "h-w-w-ft-dev-ttl",
+        content: "h-w-w-ft-dev-desc"
        },
        {
         id : EverydaySupportIcon,
-        title: "24/7 Support",
-        content: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa eaque ducimus odit nobis obcaecati, nesciunt nemo. Exercitationem, corporis harum? Ad!"
+        title: "h-w-w-ft-lm-ttl",
+        content: "h-w-w-ft-lm-desc"
        },
        {
         id : QuickIcon,
-        title: "Quick Delivery",
-        content: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa eaque ducimus odit nobis obcaecati, nesciunt nemo. Exercitationem, corporis harum? Ad!"
+        title: "h-w-w-ft-crm-ttl",
+        content: "h-w-w-ft-crm-desc"
        },
        {
         id : CustomizeIcon,
-        title: "Hands-on-approach",
-        content: "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsa eaque ducimus odit nobis obcaecati, nesciunt nemo. Exercitationem, corporis harum? Ad!"
+        title: "h-w-w-ft-tm-ttl",
+        content: "h-w-w-ft-tm-desc"
        }
 ];
 

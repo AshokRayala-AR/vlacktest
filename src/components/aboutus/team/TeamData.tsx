@@ -7,25 +7,25 @@ export const TeamData = [
     {
         id: 1,
         img: person1,
-        personName: "John Smith",
-        position: "CEO"
+        personName: "abt-us-team-ceo",
+        position: "ceo"
     },
     {
         id: 2,
         img: person2,
-        personName: "Simon Adams",
-        position: "CTO"
+        personName: "abt-us-team-cto",
+        position: "cto"
     },
     {
         id: 3,
         img: person3,
-        personName: "Paul Jones",
-        position: "Design Lead"
+        personName: "abt-us-team-lead",
+        position: "design-lead"
     },
     {
         id: 4,
         img: person4,
-        personName: "Sara Hardin",
-        position: "Project Manager"
+        personName: "abt-us-team-manager",
+        position: "pr-mngr"
     }
 ]
