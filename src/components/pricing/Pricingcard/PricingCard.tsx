@@ -1,10 +1,12 @@
 import { useNavigate } from "react-router-dom";
 import PricingList from "./PricingList";
+import { useTranslation } from "react-i18next";
 export default function PricingCard({ item, isSelected, onClick }: any) {
   const handleClick = () => {
     onClick();
   };
   const navigate = useNavigate();
+  const { t } = useTranslation();
   return (
     <div
       className={`min-w-[260px] p-5 rounded-[12px] duration-[2s] shadow-md cursor-pointer hover:bg-[#1C1E53] hover:z-50 transition-2 hover:scale-[1.2] ${
@@ -15,17 +17,17 @@ export default function PricingCard({ item, isSelected, onClick }: any) {
       <div className="  sm:flex sm:flex-col lg:flex lg:flex-col gap-4 z-1">
         <div className="flex flex-col gap-4 ">
           <p className="text-3xl font-bold flex items-center gap-2">
-            {item.amount}
+            {t(`${item.amount}`)}
             <span
               className={`text-sm font-semibold ${
                 isSelected ? "text-[#FCD980]" : "text-[#2405F2]"
               }`}
             >
-              {item.amountSpan}
+              {t(`${item.amountSpan}`)}
             </span>
           </p>
-          <p className="text-xl">{item.title}</p>
-          <p className="text-sm ">{item.description}</p>
+          <p className="text-xl">{t(`${item.title}`)}</p>
+          <p className="text-sm ">{t(`${item.description}`)}</p>
         </div>
         <ul className="flex flex-col gap-2 ">
           {item.list.map((listItem: any, index: number) => (
@@ -42,7 +44,7 @@ export default function PricingCard({ item, isSelected, onClick }: any) {
           }  text-black rounded-full`}
           onClick={() => navigate("/contact")}
         >
-          {item.btnDescription}
+          {t(`${item.btnDescription}`)}
         </button>
       </div>
     </div>
