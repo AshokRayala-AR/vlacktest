@@ -1,8 +1,9 @@
 import FeatureCard from "./FeatureCard.tsx";
+import { useTranslation } from "react-i18next";
 // import z from 'zod';
 
 function FeaturePage() {
-
+    const { t } = useTranslation();
     // const bhargva = z.object({
     //     username: z.string().max(10, { message: "can not be more than 10 letters" }).min(5),
     //     password: z.string().regex(""),
@@ -28,8 +29,8 @@ function FeaturePage() {
         <div className={'bg-[#F4F6FC] flex flex-col justify-center items-center py-20'}>
 
             <div className="w-96 text-center align-center  ">
-                <small className="font-medium">Features</small>
-                <p className="font-bold text-3xl">Design that solves problems, one product at a time</p>
+                <small className="font-medium">{ t('h-w-w-features-ttl')}</small>
+                <p className="font-bold text-3xl">{ t('h-w-w-fetures-hl')}</p>
             </div>
 
 

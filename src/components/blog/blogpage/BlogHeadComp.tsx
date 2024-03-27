@@ -1,22 +1,17 @@
+import { useTranslation } from "react-i18next";
 export default function BlogHeader() {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col text-center gap-6 w-full">
-      <h1 className="text-3xl font-semibold">
-        A UX Case Study on Creating a Studious Environment for Students
-      </h1>
-      <p className="text-sm">Andrew Jonson Posted on 27th January 2021</p>
+      <h1 className="text-3xl font-semibold">{t("blog-head-ttl")}</h1>
+      <p className="text-sm">{t("blog-head-andrew")}</p>
       <img
         src="src/assets/images/bloghead.jpg "
         className="h-[300px] object-cover"
         alt=""
       />
-      <p>
-        Apparently we had reached a great height in the atmosphere, for the sky
-        was a dead black, and the stars had ceased to twinkle. By the same
-        illusion which lifts the horizon of the sea to the level of the
-        spectator on a hillside.
-      </p>
-      <p className="text-sm text-[#2405F2]">Read more</p>
+      <p>{t("blog-head-desc")}</p>
+      <p className="text-sm text-[#2405F2]">{t("blog-rdmr")}</p>
     </div>
   );
 }

@@ -1,6 +1,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
-import { string, z } from "zod";
+import { z } from "zod";
+import { useTranslation } from "react-i18next";
 const schema = z.object({
   name: z.string().min(3).max(20),
   email: z.string().email(),
@@ -23,17 +24,16 @@ export default function ContactUsComponent() {
     resolver: zodResolver(schema),
   });
   const onSubmit = (data) => {
-    console.log(data);
     reset();
   };
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col gap-4 md:gap-10">
       <div className="flex flex-col justify-center items-center gap-2 p-6">
-        <h1 className="text-3xl lg:text-5xl font-semibold mb-2">Contact Us</h1>
-        <p className="text-base text-center lg:w-2/6">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore.
-        </p>
+        <h1 className="text-3xl lg:text-5xl font-semibold mb-2">
+          {t("cntct-us-ttl")}
+        </h1>
+        <p className="text-base text-center lg:w-2/6">{t("cntct-us-desc")}</p>
       </div>
 
       <div className="flex justify-center items-center ">
@@ -48,13 +48,13 @@ export default function ContactUsComponent() {
                   htmlFor="name"
                   className=" text-[#000000] block text-base md:text-lg font-medium "
                 >
-                  Name
+                  {t("cntct-us-name")}
                 </label>
                 <input
                   {...register("name")}
                   type="text"
                   id="name"
-                  placeholder="Enter Your Name"
+                  placeholder={t("cntct-us-name-plchldr")}
                   className="py-2  md:py-[18px] text-base placeholder-black   border bg-transparent outline-none"
                   style={{
                     borderRadius: "8px",
@@ -63,7 +63,7 @@ export default function ContactUsComponent() {
                 />
                 {errors.name && (
                   <span className="text-xs text-red-500 absolute -bottom-[15px] left-[10px]">
-                    Name is required
+                    {t("cntct-us-name-err")}
                   </span>
                 )}
               </div>
@@ -72,13 +72,13 @@ export default function ContactUsComponent() {
                   htmlFor="email"
                   className=" text-[#000000] block text-base md:text-lg font-medium text"
                 >
-                  Email
+                  {t("cntct-us-email")}
                 </label>
                 <input
                   {...register("email")}
                   type="email"
                   id="email"
-                  placeholder="Enter Your Email"
+                  placeholder={t("cntct-us-email-plchldr")}
                   className=" py-2 md:py-[18px] placeholder-black  border bg-transparent outline-none"
                   style={{
                     borderRadius: "8px",
@@ -87,7 +87,7 @@ export default function ContactUsComponent() {
                 />
                 {errors.email && (
                   <span className="text-xs text-red-500 absolute -bottom-[15px] left-[10px]">
-                    Valid email is required
+                    {t("cntct-us-email-err")}
                   </span>
                 )}
               </div>
@@ -99,13 +99,13 @@ export default function ContactUsComponent() {
                   htmlFor="context"
                   className=" text-[#000000] block text-base md:text-lg font-medium "
                 >
-                  Context
+                  {t("cntct-us-cntxt")}
                 </label>
                 <input
                   {...register("context")}
                   type="text"
                   id="context"
-                  placeholder="Provide Context"
+                  placeholder={t("cntct-us-cntxt-plchldr")}
                   className="py-2 md:py-[18px] placeholder-black mt-1 border bg-transparent outline-none"
                   style={{
                     borderRadius: "8px",
@@ -114,7 +114,7 @@ export default function ContactUsComponent() {
                 />
                 {errors.context && (
                   <span className="text-xs text-red-500 absolute -bottom-[15px] left-[10px]">
-                    context is required to be atleast 10 letters
+                    {t("cntct-us-context-err")}
                   </span>
                 )}
               </div>
@@ -123,13 +123,13 @@ export default function ContactUsComponent() {
                   htmlFor="subject"
                   className=" text-[#000000] block text-base md:text-lg font-medium "
                 >
-                  Subject
+                  {t("cntct-us-subj")}
                 </label>
                 <input
                   {...register("subject")}
                   type="text"
                   id="subject"
-                  placeholder="Select Subject"
+                  placeholder={t("cntct-us-subj-plchldr")}
                   className="py-2 md:py-[18px] placeholder-black mt-1  border bg-transparent outline-none "
                   style={{
                     borderRadius: "8px",
@@ -138,7 +138,7 @@ export default function ContactUsComponent() {
                 />
                 {errors.subject && (
                   <span className="text-xs text-red-500 absolute -bottom-[15px] left-[10px]">
-                    subject is must be atleast 2 letters
+                    {t("cntct-us-subject-err")}
                   </span>
                 )}
               </div>
@@ -149,13 +149,13 @@ export default function ContactUsComponent() {
                 htmlFor="message"
                 className=" text-[#000000] block text-base md:text-lg font-medium "
               >
-                Message
+                {t("cntct-us-msg")}
               </label>
               <textarea
                 {...register("message")}
                 id="message"
-                placeholder="Write your question here"
-                rows='2'
+                placeholder={t("cntct-us-msg-plchldr")}
+                rows="2"
                 md:rows="3"
                 cols="20"
                 className="px-[32px] py-[18px]  placeholder-black mt-1  w-full border rounded-md resize-none h-2/6 bg-transparent  outline-none"
@@ -166,7 +166,7 @@ export default function ContactUsComponent() {
               ></textarea>
               {errors.message && (
                 <span className="text-xs text-red-500 absolute -bottom-[15px] left-[10px]">
-                  Message must be greater than 20 letters
+                  {t("cntct-us-message-err")}
                 </span>
               )}
             </div>
@@ -175,11 +175,11 @@ export default function ContactUsComponent() {
                 type="submit"
                 className=" px-10 py-2 bg-[#282938] text-white p-2 rounded-full"
               >
-                Send Message
+                {t("cntct-us-send-btntxt")}
               </button>
             </div>
           </form>
-        </div>{" "}
+        </div>
       </div>
     </div>
   );

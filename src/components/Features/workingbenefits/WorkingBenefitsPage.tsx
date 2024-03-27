@@ -1,7 +1,9 @@
 import WorkingBenefitsMap from "./WokingBenefitsMap";
 import { WorkingBenefitsData } from "./WorkingBenefitsData";
+import { useTranslation } from "react-i18next";
 
-function WorkingBenefitsPage () {
+function WorkingBenefitsPage() {
+  const { t } = useTranslation();
     return (
       <div className="flex flex-col justify-center items-center p-10">
         
@@ -10,7 +12,7 @@ function WorkingBenefitsPage () {
       </div>
 
       <div className="w-96 text-center align-center mt-8">
-        <h1 className="font-bold text-3xl">The benefits of working with us</h1>
+          <h1 className="font-bold text-3xl">{ t("abt-us-benfits-ttl")}</h1>
       </div>
 
       <div className='flex flex-col gap-4 md:grid md:grid-cols-3 md:gap-4 mt-8 w-5/6 mb-4 '>

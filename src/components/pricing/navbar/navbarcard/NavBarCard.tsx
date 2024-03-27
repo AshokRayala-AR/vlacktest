@@ -22,7 +22,7 @@ export default function Navbar() {
             <NavLink className={`hover:cursor-pointer w-fit`} to="/about">
               {t("nav-aboutus")}
             </NavLink>
-            <NavLink to="/features" className={`hover:cursor-pointer`}>
+            <NavLink to="/feature" className={`hover:cursor-pointer`}>
               {t("nav-features")}
             </NavLink>
             <NavLink to="/pricing" className={`hover:cursor-pointer`}>

@@ -1,4 +1,6 @@
+import { useTranslation } from "react-i18next";
 export default function PortfolioCard({ item }) {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col gap-2 items-center">
       <div className=" ">
@@ -12,11 +14,11 @@ export default function PortfolioCard({ item }) {
         />
       </div>
       <div className="flex flex-col items-start md:gap-y-5 gap-y-2">
-        <h1 className="text-xl font-semibold">{item.title}</h1>
-        <p className="text-sm">{item.description}</p>
+        <h1 className="text-xl font-semibold">{t(`${item.title}`)}</h1>
+        <p className="text-sm">{t(`${item.description}`)}</p>
 
         <a className="text-sm font-medium" href="">
-          {item.view}
+          {t(`${item.view}`)}
         </a>
       </div>
     </div>
