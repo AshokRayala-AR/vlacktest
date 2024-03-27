@@ -4,7 +4,7 @@ import Icon from "./Icon.tsx";
 export default function HowWeWorkPage() {
   const { t } = useTranslation();
   return (
-    <div className=" flex justify-center items-center bg-[#F4F6FC] border border-green-500 p-5  lg:pt-20 md:px-14 md:pt-10">
+    <div className=" flex justify-center items-center bg-[#F4F6FC] p-5 lg:pt-20 md:px-14 md:pt-10">
       <div className=" md:flex justify-center items-start md:gap-8 ">
         <div className="flex flex-col items-center w-full text-center md:flex md:items-start md:w-2/6 md:text-left ">
           <h1 className="font-bold text-3xl p-2">{t("h-w-w-title")}</h1>

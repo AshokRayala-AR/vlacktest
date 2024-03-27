@@ -1,5 +1,4 @@
 // App.tsx
-import React from "react";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Aboutus from "./components/aboutus/Aboutus";
 import Blog from "./components/blog/Blog";

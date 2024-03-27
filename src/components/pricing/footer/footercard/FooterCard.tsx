@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 export default function FooterCard() {
+
   const { t } = useTranslation();
   return (
     <div className=" flex flex-col mt-10">
@@ -17,12 +18,14 @@ export default function FooterCard() {
             <div>
               <p>{t("ftr-call-ttl")}</p>
               <p>{t("ftr-call-num")}</p>
+
             </div>
           </div>
         </div>
         <div className="w-3/6 px-8 pt-2 flex flex-col gap-4">
           <h1 className="text-2xl">{t("ftr-talk-ttl")}</h1>
           <p className="text-sm">{t("ftr-talk-desc")}</p>
+
           <div>
             <img src="" alt="" />
             <img src="" alt="" />
@@ -43,6 +46,7 @@ export default function FooterCard() {
             <li>{t("ftr-cprgt-list4")}</li>
             <li>{t("ftr-cprgt-list5")}</li>
             <li>{t("ftr-cprgt-list6")}</li>
+
           </ul>
         </div>
       </div>

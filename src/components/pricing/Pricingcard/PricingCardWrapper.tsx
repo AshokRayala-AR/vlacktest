@@ -11,7 +11,7 @@ export default function PricingCardWrapper() {
   };
   const { t } = useTranslation();
   return (
-    <div className="flex flex-col md:p-24 p-8">
+    <div className="flex flex-col md:p-24 p-8 z-0">
       <div className="text-sm text-center w-3/6 m-auto flex flex-col gap-3 mb-10 ">
         <p className="text-2xl font-bold ">{ t("pricing-ttl")}</p>
         <p className="line-clamp-2">

@@ -1,7 +1,7 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { useTranslation } from "react-i18next";
+
 const schema = z.object({
   name: z.string().min(3).max(20),
   email: z.string().email(),
@@ -23,7 +23,9 @@ export default function ContactUsComponent() {
   } = useForm<FormFields>({
     resolver: zodResolver(schema),
   });
+
   const onSubmit = (data) => {
+
     reset();
   };
   const { t } = useTranslation();
@@ -80,6 +82,7 @@ export default function ContactUsComponent() {
                   id="email"
                   placeholder={t("cntct-us-email-plchldr")}
                   className=" py-2 md:py-[18px] placeholder-black  border bg-transparent outline-none"
+
                   style={{
                     borderRadius: "8px",
                     border: "1px solid rgba(0, 0, 0, 0.12)",
@@ -107,6 +110,7 @@ export default function ContactUsComponent() {
                   id="context"
                   placeholder={t("cntct-us-cntxt-plchldr")}
                   className="py-2 md:py-[18px] placeholder-black mt-1 border bg-transparent outline-none"
+
                   style={{
                     borderRadius: "8px",
                     border: "1px solid rgba(0, 0, 0, 0.12)",
@@ -131,6 +135,7 @@ export default function ContactUsComponent() {
                   id="subject"
                   placeholder={t("cntct-us-subj-plchldr")}
                   className="py-2 md:py-[18px] placeholder-black mt-1  border bg-transparent outline-none "
+
                   style={{
                     borderRadius: "8px",
                     border: "1px solid rgba(0, 0, 0, 0.12)",

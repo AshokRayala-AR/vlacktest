@@ -1,6 +1,6 @@
-export default function Icon({ item }) {
+export default function Icon({ item }: any) {
   return (
-    <div className="w-12 h-12 bg-[#3114f4] rounded-[12px] relative overflow-hidden border-none z-0">
+    <div className="w-12 h-12 bg-[#3114f4] rounded-[12px] relative overflow-hidden border-none">
       <div className="bg-[#5239fa] rounded-xl w-14 h-14 absolute left-2 bottom-2 z-10 border-none">
         <span className="absolute bottom-1 left-2 text-lg text-white font-medium border-none">
           {item.id}
