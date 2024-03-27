@@ -6,10 +6,7 @@ export default function HowWeWorkPage() {
       <div className=" md:flex justify-center items-start md:gap-8 ">
         <div className="flex flex-col items-center w-full text-center md:flex md:items-start md:w-2/6 md:text-left ">
           <h1 className="font-bold text-3xl p-2">how we work</h1>
-          <p className="p-2 w-4/6  md:w-full">
-            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reiciendis
-            exercitationem laboriosam corporis nemo fugiat autem?
-          </p>
+          <p className="p-2 w-4/6  md:w-full"></p>
           <a href="#" className=" text-customblue p-2 ">
             get in touch with us &#8594;
           </a>

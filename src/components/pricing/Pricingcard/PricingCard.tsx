@@ -7,12 +7,9 @@ export default function PricingCard({ item, isSelected, onClick }: any) {
   const navigate = useNavigate();
   return (
     <div
-      className={`p-5 rounded-[12px] duration-[2s] shadow-md cursor-pointer hover:z-50 transition-2 hover:scale-[1.3] ${
+      className={`min-w-[260px] p-5 rounded-[12px] duration-[2s] shadow-md cursor-pointer hover:bg-[#1C1E53] hover:z-50 transition-2 hover:scale-[1.2] ${
         isSelected ? "bg-[#1C1E53] " : "bg-[#F4F6FC] text-black"
       } flex flex-col gap-10 md:w-full md:p-3 md:pt-5 lg:py-10 lg:pl-8 lg:pr-14  `}
-      style={{
-        minWidth: "260px",
-      }}
       onClick={handleClick}
     >
       <div className="  sm:flex sm:flex-col lg:flex lg:flex-col gap-4 z-1">
