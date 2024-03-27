@@ -1,6 +1,5 @@
-
 import { useTranslation } from "react-i18next";
-export default function PortfolioCard({ item }) {
+export default function PortfolioCard({ item }: any) {
   const { t } = useTranslation();
 
   return (
