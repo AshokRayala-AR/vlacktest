@@ -1,4 +1,7 @@
-export default function Icon({ item }: any) {
+import { IconPropType, IconType } from "../../../utils/types/Types.ts";
+
+export default function Icon({ item }: IconPropType) {
+  console.log(item);
   return (
     <div className="w-12 h-12 bg-[#3114f4] rounded-[12px] relative overflow-hidden border-none">
       <div className="bg-[#5239fa] rounded-xl w-14 h-14 absolute left-2 bottom-2 z-10 border-none">
