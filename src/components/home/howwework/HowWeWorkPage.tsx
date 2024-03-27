@@ -8,9 +8,9 @@ export default function HowWeWorkPage() {
       <div className=" md:flex justify-center items-start md:gap-8 ">
         <div className="flex flex-col items-center w-full text-center md:flex md:items-start md:w-2/6 md:text-left ">
           <h1 className="font-bold text-3xl p-2">how we work</h1>
-          <p className="p-2 w-4/6  md:w-full"></p>
+          <p className="p-2 w-4/6  md:w-full">{t("h-w-w-desc")}</p>
           <a href="#" className=" text-customblue p-2 ">
-            {t("")}
+            {t("h-w-w-link")}
           </a>
         </div>
         <div className="p-5 gap-y-4 grid grid-cols-1 md:w-3/6 md:px-0 sm:grid-cols-2 ">
