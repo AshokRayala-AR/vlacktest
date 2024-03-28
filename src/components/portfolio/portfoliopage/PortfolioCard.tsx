@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
-export default function PortfolioCard({ item }: any) {
+import { PortfolioType } from "../../../utils/types/Types";
+export default function PortfolioCard({ itemPo }: {itemPo: PortfolioType}) {
   const { t } = useTranslation();
 
   return (
@@ -8,18 +9,18 @@ export default function PortfolioCard({ item }: any) {
         <img
           className="w-screen border-x-[39px] border-y-[30px] md:w-[545px] h-[317px]  object-contain object-center"
           style={{
-            borderImage: `${item.border}`,
+            borderImage: `${itemPo.border}`,
           }}
-          src={item.img}
+          src={itemPo.img}
           alt="some"
         />
       </div>
-      <div className="flex flex-col items-start md:gap-y-5 gap-y-2">
-        <h1 className="text-xl font-semibold">{t(`${item.title}`)}</h1>
-        <p className="text-sm">{t(`${item.description}`)}</p>
+      <div className="flex flex-col itemPos-start md:gap-y-5 gap-y-2">
+        <h1 className="text-xl font-semibold">{t(`${itemPo.title}`)}</h1>
+        <p className="text-sm">{t(`${itemPo.description}`)}</p>
 
         <a className="text-sm font-medium" href="">
-          {t(`${item.view}`)}
+          {t(`${itemPo.view}`)}
         </a>
       </div>
     </div>

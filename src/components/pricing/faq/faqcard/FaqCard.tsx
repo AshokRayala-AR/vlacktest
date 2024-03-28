@@ -1,4 +1,5 @@
 import { motion } from "framer-motion";
+import { AccordionItemProps } from "../../../../utils/types/Types";
 
 export default function AccordionItem({
   title,
@@ -6,7 +7,7 @@ export default function AccordionItem({
   isActive,
   onClick,
   indexCount,
-}: any) {
+}: AccordionItemProps) {
   return (
     <motion.div
       initial={{ opacity: 1, height: "auto" }}

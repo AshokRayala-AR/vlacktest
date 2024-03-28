@@ -1,7 +1,9 @@
 import { useNavigate } from "react-router-dom";
 import PricingList from "./PricingList";
 import { useTranslation } from "react-i18next";
-export default function PricingCard({ item, isSelected, onClick }: any) {
+import { PricingCardProp } from "../../../utils/types/Types";
+
+export default function PricingCard({ item, isSelected, onClick }: PricingCardProp) {
   const handleClick = () => {
     onClick();
   };
@@ -30,7 +32,7 @@ export default function PricingCard({ item, isSelected, onClick }: any) {
           <p className="text-sm ">{t(`${item.description}`)}</p>
         </div>
         <ul className="flex flex-col gap-2 ">
-          {item.list.map((listItem: any, index: number) => (
+          {item.list.map((listItem: string, index: number) => (
             <div key={index} className="list-none text-sm">
               <PricingList listItem={listItem} />
             </div>
