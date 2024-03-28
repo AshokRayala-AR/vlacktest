@@ -1,11 +1,8 @@
-import { useTranslation } from "react-i18next";
 import { Example } from "./Example";
-import { NavLink, useNavigate } from "react-router-dom";
+
 import Logo from "../../../../assets/images/logoVlack.png";
 import NavListComp from "./NavListComp";
 export default function Navbar() {
-  const navigate = useNavigate();
-  const { t } = useTranslation();
   return (
     <div className="w-full">
       <nav className="bg-black text-white text-sm p-0 m-0 w-full flex justify-between items-center py-3 px-2 pr-8 fixed top-0 z-50">

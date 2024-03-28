@@ -1,6 +1,9 @@
 import { z } from "zod";
 
-
+export const IconSchema = z.object({
+  id: z.string(),
+  title: z.string(),
+});
 
 export type IconType = z.infer<typeof IconSchema>;
 
@@ -10,36 +13,31 @@ export const IconPropSchema = z.object({
 
 export type IconPropType = z.infer<typeof IconPropSchema>;
 
-
-
 export const FeatureSchema = z.object({
   svg: z.function(),
   title: z.string(),
   content: z.string(),
-})
+});
 
-export type FeatureType = z.infer<typeof FeatureSchema>
+export type FeatureType = z.infer<typeof FeatureSchema>;
 
 export const FeaturepropSchema = z.object({
   itemFe: FeatureSchema,
-})
+});
 
 export type FeaturePropType = z.infer<typeof FeaturepropSchema>;
 
-
-
 export const DesignSchema = z.object({
   itemsDl: z.string(),
-})
+});
 
-export type DesignType = z.infer<typeof DesignSchema>
+export type DesignType = z.infer<typeof DesignSchema>;
 
 export const DesignPropSchema = z.object({
-  itemDL: DesignSchema,
-})
+  item: DesignSchema,
+});
 
-export type DesignPropType = z.infer<typeof DesignPropSchema>
-
+export type DesignPropType = z.infer<typeof DesignPropSchema>;
 
 export const PortfolioSchema = z.object({
   img: z.string(),
@@ -47,12 +45,12 @@ export const PortfolioSchema = z.object({
   description: z.string(),
   view: z.string(),
   border: z.string(),
-})
+});
 
-export type PortfolioType = z.infer<typeof PortfolioSchema>
+export type PortfolioType = z.infer<typeof PortfolioSchema>;
 
-export interface AccordionItemProps  {
-  title: string,
+export interface AccordionItemProps {
+  title: string;
   content: React.ReactNode;
   isActive: boolean;
   onClick: () => void;
@@ -60,25 +58,21 @@ export interface AccordionItemProps  {
   className?: string;
 }
 
-
 export const priceSchema = z.object({
   listItem: z.string(),
-  
-  
-})
-export type PriceType = z.infer<typeof priceSchema>
+});
+export type PriceType = z.infer<typeof priceSchema>;
 export const PricePropSchema = z.object({
- listItem: priceSchema,
-})
-export type PricePropType = z.infer<typeof PricePropSchema>
-
+  listItem: priceSchema,
+});
+export type PricePropType = z.infer<typeof PricePropSchema>;
 
 export const itempSchema = z.object({
   amount: z.string(),
   amountSpan: z.string(),
   title: z.string(),
   description: z.string(),
-  list: z.array(z.string()), 
+  list: z.array(z.string()),
   btnDescription: z.string(),
 });
 
@@ -90,3 +84,19 @@ export interface PricingCardProp {
   onClick: () => void;
 }
 
+export const navSchema = z.object({
+  navLink: z.string(),
+  route: z.string(),
+});
+
+export type NavTypes = z.infer<typeof navSchema>;
+
+export const portfolioSchema = z.object({
+  img: z.string(),
+  title: z.string(),
+  description: z.string(),
+  view: z.string(),
+  border: z.string(),
+});
+
+export type PortfoliosType = z.infer<typeof portfolioSchema>;

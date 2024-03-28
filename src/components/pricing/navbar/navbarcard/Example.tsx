@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, Ref } from "react";
 import { motion, useCycle } from "framer-motion";
 import { useDimensions } from "./UseDimensions";
 import { MenuToggle } from "./MenuToggle";
@@ -26,26 +26,25 @@ const sidebar = {
 
 export const Example = () => {
   const [isOpen, toggleOpen] = useCycle(false, true);
-  const containerRef = useRef(null);
+  const containerRef: Ref<any> = useRef(null);
   const { height } = useDimensions(containerRef);
 
   useEffect(() => {
-    const handleOutsideClick = (event) => {
+    const handleOutsideClick = (event: any) => {
       if (
         containerRef.current &&
         !containerRef.current.contains(event.target) &&
-        isOpen 
+        isOpen
       ) {
         toggleOpen();
       }
     };
-  
+
     document.addEventListener("mousedown", handleOutsideClick);
     return () => {
       document.removeEventListener("mousedown", handleOutsideClick);
     };
   }, [containerRef, isOpen, toggleOpen]);
-  
 
   return (
     <motion.nav
@@ -53,7 +52,6 @@ export const Example = () => {
       animate={isOpen ? "open" : "closed"}
       custom={height}
       ref={containerRef}
-      
     >
       <motion.div className="background" variants={sidebar} />
       <Navigation />

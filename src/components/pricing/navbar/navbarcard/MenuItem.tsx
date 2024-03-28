@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { NavLink } from "react-router-dom";
 import { useTranslation } from "react-i18next";
+import { NavTypes } from "../../../../utils/types/Types.ts";
 const variants = {
   open: {
     y: 0,
@@ -18,7 +19,7 @@ const variants = {
   },
 };
 
-export const MenuItem = ({ item }) => {
+export const MenuItem = ({ item }: { item: NavTypes }) => {
   const { t } = useTranslation();
   return (
     <motion.div
