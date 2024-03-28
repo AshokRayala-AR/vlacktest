@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 export const IconSchama = z.object({
-  id: z.number(),
+  id: z.string(),
   title: z.string(),
   content: z.string(),
 });
