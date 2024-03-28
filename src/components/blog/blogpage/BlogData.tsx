@@ -12,7 +12,7 @@ export const BlogCardData = [
       "blog-card1-ttl",
     description:
       "blog-card1-desc",
-    readmore: "Read More",
+    readmore: "blog-rdmr",
     // text: "blog-card2-ttl",
   },
   {

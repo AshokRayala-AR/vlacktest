@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { BlogCardData } from "./BlogData";
 import { useTranslation } from "react-i18next";
 export default function BlogCard() {
@@ -12,12 +13,17 @@ export default function BlogCard() {
           return (
             <div className="flex flex-col gap-3 mb-4" key={index}>
               <img src={item.img} alt="" />
-              <p className="text-sm">{ t(`${item.date}`)}</p>
-              <h1 className="text-lg font-semibold">{ t(`${item.headline}`)}</h1>
-              <p className="text-sm">{t(`${item.description}`)}</p>
-              <a className="font-medium" href="">
-                {item.readmore}
-              </a>
+              <p className="text-sm">{t(`${item.date}`)}</p>
+              <h1 className="text-lg font-semibold">{t(`${item.headline}`)}</h1>
+              <p
+                className="text-sm line-clamp-4
+              "
+              >
+                {t(`${item.description}`)}
+              </p>
+              <Link className="font-medium" to="">
+                {t(`${item.readmore}`)} &rarr;
+              </Link>
             </div>
           );
         })}

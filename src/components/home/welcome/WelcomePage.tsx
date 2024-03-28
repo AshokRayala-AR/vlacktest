@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import WelcomeSvg from "./WelcomeSvg";
+import { Link } from "react-router-dom";
 export default function WelcomePage() {
   const { t } = useTranslation();
   return (
@@ -13,9 +14,9 @@ export default function WelcomePage() {
           <button className="home-comp-btn-view-work text-sm text-black px-7 py-3 rounded-full bg-[#FCD980] ">
             {t("home-comp-btn-view-work")}
           </button>
-          <a href="" className="text-sm">
+          <Link to='/pricing' className="text-sm">
             {t("home-comp-link-view-pricing")}
-          </a>
+          </Link>
         </div>
       </div>
       <div className="w-full h-full flex justify-center  lg:w-3/6 lg:p-5 ">

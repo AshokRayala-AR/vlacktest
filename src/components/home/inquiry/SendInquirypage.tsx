@@ -3,6 +3,7 @@ import inquiryimage from "../../../assets/images/inquiryimage.jpeg";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import { z } from "zod";
+import { Link } from "react-router-dom";
 
 const schema = z.object({
   Name: z.string().min(3),
@@ -92,9 +93,9 @@ function SendInquiryPage() {
               >
                 {t("home-form-btn")}
               </button>
-              <a href="#" className="text-white">
+              <Link to='/contact' className="text-white">
                 {t("home-form-link")} &#8594;
-              </a>
+              </Link>
             </div>
           </form>
         </div>
