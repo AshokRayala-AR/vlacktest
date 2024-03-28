@@ -1,10 +1,6 @@
 import { z } from "zod";
 
-export const IconSchema = z.object({
-  id: z.string(),
-  title: z.string(),
-  content: z.string(),
-});
+
 
 export type IconType = z.infer<typeof IconSchema>;
 

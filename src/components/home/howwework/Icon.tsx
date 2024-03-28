@@ -1,4 +1,4 @@
-import { IconPropType, IconType } from "../../../utils/types/Types.ts";
+import { IconPropType } from "../../../utils/types/Types.ts";
 
 export default function Icon({ item }: IconPropType) {
   console.log(item);
