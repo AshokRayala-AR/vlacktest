@@ -90,13 +90,3 @@ export const navSchema = z.object({
 });
 
 export type NavTypes = z.infer<typeof navSchema>;
-
-export const portfolioSchema = z.object({
-  img: z.string(),
-  title: z.string(),
-  description: z.string(),
-  view: z.string(),
-  border: z.string(),
-});
-
-export type PortfoliosType = z.infer<typeof portfolioSchema>;
