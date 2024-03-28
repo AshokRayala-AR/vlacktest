@@ -5,9 +5,9 @@ import { useTranslation } from "react-i18next";
 
 export default function Accordion() {
   const { t } = useTranslation();
-  const [activeItem, setActiveItem] = useState(null);
+  const [activeItem, setActiveItem] = useState<number | null>(null);
 
-  const toggleAccordion = (index: any) => {
+  const toggleAccordion = (index: number) => {
     setActiveItem(index === activeItem ? null : index);
   };
 

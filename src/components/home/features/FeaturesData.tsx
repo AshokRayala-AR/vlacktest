@@ -7,32 +7,32 @@ import RevisionIcon from "../../../assets/svg/RevisionIcon";
 
 export const Data = [
        {
-        id : SupportIcon,
+        svg : SupportIcon,
         title: "h-w-w-ft-ucf-ttl",
         content: "h-w-w-ft-ucf-desc"
        },
        {
-        id : RevisionIcon,
+        svg : RevisionIcon,
         title: "h-w-w-ft-aa-ttl",
         content: "h-w-w-ft-aa-desc"
        },
        {
-        id : ResponsiveIcon,
+        svg : ResponsiveIcon,
         title: "h-w-w-ft-dev-ttl",
         content: "h-w-w-ft-dev-desc"
        },
        {
-        id : EverydaySupportIcon,
+        svg : EverydaySupportIcon,
         title: "h-w-w-ft-lm-ttl",
         content: "h-w-w-ft-lm-desc"
        },
        {
-        id : QuickIcon,
+        svg : QuickIcon,
         title: "h-w-w-ft-crm-ttl",
         content: "h-w-w-ft-crm-desc"
        },
        {
-        id : CustomizeIcon,
+        svg : CustomizeIcon,
         title: "h-w-w-ft-tm-ttl",
         content: "h-w-w-ft-tm-desc"
        }
