@@ -2,6 +2,8 @@ import { useState } from "react";
 import AccordionItem from "./FaqCard";
 import FaqCardHeader from "./FaqCardHeader";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
+import { cardVariants } from "../../../../utils/scrolls/Scroll";
 
 export default function Accordion() {
   const { t } = useTranslation();
@@ -39,11 +41,13 @@ export default function Accordion() {
   ];
 
   return (
-    <div className="flex flex-col items-center justify-center max-w-screen gap-y-8 lg:flex-row lg:justify-between lg:items-start ">
+    <motion.div className="flex flex-col items-center justify-center max-w-screen gap-y-8 lg:flex-row lg:justify-between lg:items-start " initial="offscreen"
+    whileInView="onscreen"
+    viewport={{ once: true, amount: 0.2 }}>
       <div className="w-full text-center lg:w-3/6  lg:text-left">
         <FaqCardHeader />
       </div>
-      <div className="w-full  lg:w-4/6 lg:p-0">
+      <motion.div className="w-full  lg:w-4/6 lg:p-0" variants={cardVariants}>
         {accordionData.map((item, index) => (
           <AccordionItem
             key={index}
@@ -55,7 +59,7 @@ export default function Accordion() {
             className="border border-green-500"
           />
         ))}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }
