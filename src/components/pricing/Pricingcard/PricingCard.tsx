@@ -3,6 +3,7 @@ import PricingList from "./PricingList";
 import { useTranslation } from "react-i18next";
 import { PricingCardProp } from "../../../utils/types/Types";
 
+
 export default function PricingCard({ item, isSelected, onClick }: PricingCardProp) {
   const handleClick = () => {
     onClick();
@@ -14,8 +15,10 @@ export default function PricingCard({ item, isSelected, onClick }: PricingCardPr
       className={`min-w-[260px] p-5 rounded-[12px] duration-[2s] shadow-md cursor-pointer hover:bg-[#1C1E53] hover:z-50 transition-2 hover:scale-[1.2] ${
         isSelected ? "bg-[#1C1E53] " : "bg-[#F4F6FC] text-black"
       } flex flex-col gap-10 md:w-full md:p-3 md:pt-5 lg:py-10 lg:pl-8 lg:pr-14  `}
-      onClick={handleClick}
+      onClick={handleClick} 
+      
     >
+      <div >
       <div className="  sm:flex sm:flex-col lg:flex lg:flex-col gap-4 z-1">
         <div className="flex flex-col gap-4 ">
           <p className="text-3xl font-bold flex items-center gap-2">
@@ -48,6 +51,7 @@ export default function PricingCard({ item, isSelected, onClick }: PricingCardPr
         >
           {t(`${item.btnDescription}`)}
         </button>
+      </div>
       </div>
     </div>
   );

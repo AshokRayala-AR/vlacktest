@@ -2,6 +2,8 @@ import { zodResolver } from "@hookform/resolvers/zod";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
+import { cardVariants } from "../../../utils/scrolls/Scroll";
 
 const schema = z.object({
   name: z.string().min(3).max(20),
@@ -30,16 +32,22 @@ export default function ContactUsComponent() {
   };
   const { t } = useTranslation();
   return (
-    <div className="flex flex-col gap-4 md:gap-10">
-      <div className="flex flex-col justify-center items-center gap-2 p-6">
+    <motion.div className="flex flex-col gap-4 md:gap-10" 
+    initial="offscreen"
+    whileInView="onscreen"
+    viewport={{ once: true, amount: 0.1 }}>
+      <motion.div className="flex flex-col justify-center items-center gap-2 p-6" variants={cardVariants}>
         <h1 className="text-3xl lg:text-5xl font-semibold mb-2">
           {t("cntct-us-ttl")}
         </h1>
         <p className="text-base text-center lg:w-2/6">{t("cntct-us-desc")}</p>
-      </div>
+      </motion.div>
 
-      <div className="flex justify-center items-center ">
-        <div className="w-screen md:max-w-[961px] bg-[#F4F6FC] rounded-md">
+      <motion.div className="flex justify-center items-center " 
+      initial="offscreen"
+    whileInView="onscreen"
+    viewport={{ once: true, amount: 0.4 }}>
+        <motion.div className="w-screen md:max-w-[961px] bg-[#F4F6FC] rounded-md" variants={cardVariants}>
           <form
             onSubmit={handleSubmit(onSubmit)}
             className="text-[#000000] p-6 md:p-[77px]"
@@ -57,7 +65,7 @@ export default function ContactUsComponent() {
                   type="text"
                   id="name"
                   placeholder={t("cntct-us-name-plchldr")}
-                  className="py-2  md:py-[18px] text-base placeholder-black   border bg-transparent outline-none"
+                  className="py-2  md:py-[18px] text-base placeholder-black p-2  border bg-transparent outline-none"
                   style={{
                     borderRadius: "8px",
                     border: "1px solid rgba(0, 0, 0, 0.12)",
@@ -81,7 +89,7 @@ export default function ContactUsComponent() {
                   type="email"
                   id="email"
                   placeholder={t("cntct-us-email-plchldr")}
-                  className=" py-2 md:py-[18px] placeholder-black  border bg-transparent outline-none"
+                  className=" py-2 md:py-[18px] placeholder-black p-2 border bg-transparent outline-none"
                   style={{
                     borderRadius: "8px",
                     border: "1px solid rgba(0, 0, 0, 0.12)",
@@ -108,7 +116,7 @@ export default function ContactUsComponent() {
                   type="text"
                   id="context"
                   placeholder={t("cntct-us-cntxt-plchldr")}
-                  className="py-2 md:py-[18px] placeholder-black mt-1 border bg-transparent outline-none"
+                  className="py-2 md:py-[18px] placeholder-black mt-1 p-2 border bg-transparent outline-none"
                   style={{
                     borderRadius: "8px",
                     border: "1px solid rgba(0, 0, 0, 0.12)",
@@ -132,7 +140,7 @@ export default function ContactUsComponent() {
                   type="text"
                   id="subject"
                   placeholder={t("cntct-us-subj-plchldr")}
-                  className="py-2 md:py-[18px] placeholder-black mt-1  border bg-transparent outline-none "
+                  className="py-2 md:py-[18px] placeholder-black mt-1 p-2 border bg-transparent outline-none "
                   style={{
                     borderRadius: "8px",
                     border: "1px solid rgba(0, 0, 0, 0.12)",
@@ -180,8 +188,8 @@ export default function ContactUsComponent() {
               </button>
             </div>
           </form>
-        </div>
-      </div>
-    </div>
+        </motion.div>
+      </motion.div>
+    </motion.div>
   );
 }
