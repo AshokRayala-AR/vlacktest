@@ -33,17 +33,19 @@ export const Example = () => {
     const handleOutsideClick = (event) => {
       if (
         containerRef.current &&
-        !containerRef.current.contains(event.target)
+        !containerRef.current.contains(event.target) &&
+        isOpen 
       ) {
         toggleOpen();
       }
     };
-
+  
     document.addEventListener("mousedown", handleOutsideClick);
     return () => {
       document.removeEventListener("mousedown", handleOutsideClick);
     };
-  }, [containerRef, toggleOpen]);
+  }, [containerRef, isOpen, toggleOpen]);
+  
 
   return (
     <motion.nav
