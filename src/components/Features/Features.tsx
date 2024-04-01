@@ -3,7 +3,7 @@ import WorkingBenefitsPage from "./workingbenefits/WorkingBenefitsPage";
 
 function Features() {
   return (
-    <div className={`main_head`}>
+    <div className={`main_head overflow-hidden`}>
       <WorkingBenefitsPage />
       <ClientPage />
     </div>
