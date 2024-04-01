@@ -17,7 +17,7 @@ export default function HowWeWorkPage() {
       <div className=" xl:flex justify-center items-start xl:gap-8 ">
         <div className="flex flex-col items-center w-full text-center xl:flex xl:items-start xl:w-2/6 xl:text-left ">
           <h1 className="font-bold text-3xl p-2">how we work</h1>
-          <p className="p-2 w-4/6  xl:w-full">{t("h-w-w-desc")}</p>
+          <p className="p-2 md:w-4/6 w-5/6 xl:w-full">{t("h-w-w-desc")}</p>
           <Link to="/contact" className=" text-customblue p-2 font-semibold">
             {t("h-w-w-link")} &rarr;
           </Link>

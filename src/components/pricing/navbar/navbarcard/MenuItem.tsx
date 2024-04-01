@@ -20,7 +20,7 @@ const variants = {
   },
 };
 
-export const MenuItem = ({ item }: { item: NavTypes }) => {
+export const MenuItem = ({ item, closeMenu }: { item: NavTypes, closeMenu: () => void }) => {
   const { t } = useTranslation();
   return (
     <motion.div
@@ -31,6 +31,7 @@ export const MenuItem = ({ item }: { item: NavTypes }) => {
       <NavLink
         to={item.route}
         className="nav-li shadow-md px-4 py-2  text-[#1C1E53] "
+        onClick={closeMenu}
       >
         {t(`${item.navLink}`)}
       </NavLink>

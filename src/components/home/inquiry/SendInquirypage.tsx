@@ -6,6 +6,7 @@ import { z } from "zod";
 import { motion } from "framer-motion";
 import { cardVariants } from "../../../utils/scrolls/Scroll";
 import useWindoWidth from "../../../hooks/useWindoWidth.tsx";
+import { Link } from "react-router-dom";
 
 const schema = z.object({
   Name: z.string().min(3),
@@ -31,36 +32,36 @@ function SendInquiryPage() {
   const { t } = useTranslation();
   return (
     <motion.div
-      className="lg:p-28 p-2 text-white"
+      className="md:p-24 text-white"
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.3 }}
     >
       <div
-        className="lg:h-screen  w-full sm:w-full p-0 m-2 flex items-center justify-center"
+        className=" w-full  flex items-center justify-center"
         style={{ backgroundImage: `url(${width < 700 ? " " : inquiryimage})` }}
       >
-        <div className="imgb bg-blue-800 sm:w-full sm:p-10 bg-opacity-30 hidden lg:flex lg:flex-col lg:justify-center lg:items-center md:w-3/6 h-full lg:px-24 sm:hidden gap-6 md:text-left">
+        <div className="imgb  h-full p-5 gap-6 bg-opacity-30 hidden md:text-left lg:flex lg:flex-col lg:justify-center lg:items-center md:w-3/6">
           <motion.div variants={cardVariants}>
-            <h1 className="text-5xl font-semibold leading-[66px] ">
+            <h1 className="text-3xl font-large lg:leading-[53px]">
               home-form-ttl {t("home-form-ttl")}
             </h1>
-            <p className="text-base font-medium leading-[26px] ">
+            <p className="text-base font-md leading-[26px]">
               {t("home-form-desc")}
             </p>
           </motion.div>
         </div>
 
-        <div className="md:w-full  lg:w-3/6 h-full bg-[#1C1E53]  flex flex-col justify-center items-center gap-2 md:p-2 ">
+        <div className="w-full h-full py-8 bg-[#1C1E53] flex flex-col justify-center items-center gap-2  md:w-[432px]  md:px-6 md:py-14 lg:w-3/6 ">
           <motion.div
-            className="lg:text-left flex flex-col gap-4 p-4 lg:p-0"
+            className="flex flex-col gap-4 p-4 lg:p-0  lg:text-left"
             variants={cardVariants}
           >
-            <h1 className="text-3xl font-large ">{t("home-form-enq")}</h1>
+            <h1 className="text-3xl font-large  ">{t("home-form-enq")}</h1>
           </motion.div>
           <motion.form
             onSubmit={handleSubmit(onSubmit)}
-            className="p-2 w-full md:w-full  sm:w-full flex flex-col gap-8 lg:px-16 "
+            className="p-2 w-full flex flex-col gap-8 md:w-[432px] lg:px-16 "
             variants={cardVariants}
           >
             <div className="flex flex-col gap-8 mt-4">
@@ -105,13 +106,13 @@ function SendInquiryPage() {
             <div className="flex flex-col items-center gap-6 mt-2">
               <button
                 type="submit"
-                className="bg-[#FCD980] text-black p-2 rounded-full w-full md:px-16 md:p-4 lg:w-full"
+                className="bg-[#FCD980] text-black py-2 rounded-full w-4/6 "
               >
                 {t("home-form-btn")}
               </button>
-              <a href="#" className="text-white">
+              <Link to="/contact" className="text-white">
                 {t("home-form-link")} &#8594;
-              </a>
+              </Link>
             </div>
           </motion.form>
         </div>

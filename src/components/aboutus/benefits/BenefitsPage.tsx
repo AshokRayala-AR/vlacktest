@@ -1,6 +1,5 @@
-// import CustomizeIcon from "../../../assets/svg/CustomizeIcon";
 import { Data } from "./BenefitsData";
-import BenefitsSvgMap from "./BenefitsSvgMap";
+
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { cardVariants } from "../../../utils/scrolls/Scroll";
@@ -9,7 +8,7 @@ function BenefitsPage() {
   const { t } = useTranslation();
   return (
     <motion.div
-      className="flex flex-col justify-center items-center p-10"
+      className="flex flex-col gap-8 justify-center items-center"
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.1 }}
@@ -21,7 +20,7 @@ function BenefitsPage() {
         <h1 className="font-bold text-3xl">{t("abt-us-benfits-ttl")}</h1>
       </motion.div>
 
-      <div className="flex flex-col gap-4 sm:grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-4 mt-8 w-5/6 mb-4 ">
+      <div className=" gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-4  w-5/6 mb-4 ">
         {Data.map((item) => (
           <motion.div
             initial="offscreen"
@@ -29,7 +28,7 @@ function BenefitsPage() {
             viewport={{ once: true, amount: 0.8 }}
           >
             <motion.div
-              className=" md:text-left p-6 bg-[#f4f6fc]"
+              className=" md:text-left p-6 bg-[#f4f6fc] "
               variants={cardVariants}
             >
               <div className="flex justify-center mb-4 md:justify-start">
@@ -43,13 +42,6 @@ function BenefitsPage() {
           </motion.div>
         ))}
       </div>
-
-      <motion.div
-        className="md:flex md:justify-center lg:flex lg:justify-center lg:w-5/6 p-4"
-        variants={cardVariants}
-      >
-        <BenefitsSvgMap />
-      </motion.div>
     </motion.div>
   );
 }

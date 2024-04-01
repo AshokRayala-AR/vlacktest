@@ -21,12 +21,12 @@ export default function PortfolioCard({
           alt="some"
         />
       </div>
-      <div className="flex flex-col itemPos-start md:gap-y-5 gap-y-2">
+      <div className="flex flex-col items-start md:gap-y-5 gap-y-2">
         <h1 className="text-xl font-semibold">{t(`${item.title}`)}</h1>
         <p className="text-sm">{t(`${item.description}`)}</p>
 
         <a className="text-sm font-medium" href="">
-          {t(`${item.view}`)}
+        {t(`${item.view}`)} &rarr;
         </a>
       </div>
     </div>

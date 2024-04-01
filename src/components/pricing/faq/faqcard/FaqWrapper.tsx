@@ -20,30 +20,29 @@ export default function Accordion() {
     },
     {
       title: t("faq-q-2"),
-      content:
-        t('faq-a-2'),
+      content: t("faq-a-2"),
     },
     {
       title: t("faq-q-3"),
-      content:
-      t('faq-a-3'),
+      content: t("faq-a-3"),
     },
     {
       title: t("faq-q-4"),
-      content:
-      t('faq-a-4'),
+      content: t("faq-a-4"),
     },
     {
       title: t("faq-q-5"),
-      content:
-      t('faq-a-5'),
+      content: t("faq-a-5"),
     },
   ];
 
   return (
-    <motion.div className="flex flex-col items-center justify-center max-w-screen gap-y-8 lg:flex-row lg:justify-between lg:items-start " initial="offscreen"
-    whileInView="onscreen"
-    viewport={{ once: true, amount: 0.2 }}>
+    <motion.div
+      className="flex flex-col items-center justify-center max-w-screen gap-y-8 lg:flex-row lg:justify-between lg:items-start "
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0.2 }}
+    >
       <div className="w-full text-center lg:w-3/6  lg:text-left">
         <FaqCardHeader />
       </div>
@@ -56,10 +55,11 @@ export default function Accordion() {
             content={item.content}
             isActive={index === activeItem}
             onClick={() => toggleAccordion(index)}
-            className="border border-green-500"
+            className=""
           />
         ))}
       </motion.div>
     </motion.div>
   );
 }
+

@@ -1,4 +1,4 @@
-import { useRef, useEffect, Ref } from "react";
+import { useRef, useEffect, RefObject } from "react";
 import { motion, useCycle } from "framer-motion";
 import { useDimensions } from "./UseDimensions";
 import { MenuToggle } from "./MenuToggle";
@@ -26,14 +26,19 @@ const sidebar = {
 
 export const Example = () => {
   const [isOpen, toggleOpen] = useCycle(false, true);
-  const containerRef: Ref<any> = useRef(null);
+  const containerRef:RefObject<HTMLDivElement> = useRef(null);
   const { height } = useDimensions(containerRef);
 
+  const closeMenu = () => {
+    toggleOpen();
+  };
+
   useEffect(() => {
-    const handleOutsideClick = (event: any) => {
+    const handleOutsideClick = (event: MouseEvent) => {
+      const targetNode = event.target as Node; 
       if (
         containerRef.current &&
-        !containerRef.current.contains(event.target) &&
+        !containerRef.current.contains(targetNode) &&
         isOpen
       ) {
         toggleOpen();
@@ -54,7 +59,7 @@ export const Example = () => {
       ref={containerRef}
     >
       <motion.div className="background" variants={sidebar} />
-      <Navigation />
+      <Navigation closeMenu={closeMenu} />
       <MenuToggle toggle={() => toggleOpen()} />
     </motion.nav>
   );

@@ -12,13 +12,13 @@ const variants = {
   },
 };
 
-export const Navigation = () => (
+export const Navigation = ({ closeMenu }: { closeMenu: () => void }) => (
   <motion.ul
     variants={variants}
-    className="nav-ul  shadow-lg absolute h-screen right-0 top-[90px] p-[25px] w-[250px]  bg-white"
+    className="nav-ul  shadow-lg absolute h-screen right-0 w-[280px]  bg-white"
   >
     {NavListComplData.map((item, index: number) => (
-      <MenuItem item={item} key={index} />
+      <MenuItem item={item} key={index} closeMenu={closeMenu} />
     ))}
   </motion.ul>
 );
