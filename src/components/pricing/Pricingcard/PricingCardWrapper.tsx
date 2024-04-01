@@ -23,7 +23,7 @@ export default function PricingCardWrapper() {
          {t("pricing-desc")}
         </p>
       </motion.div>
-      <motion.div className=" text-white gap-x-4 gap-y-4 grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3" variants={cardVariants}>
+      <motion.div className="mx-auto text-white gap-x-4 gap-y-4  grid grid-cols-1 md:grid-cols-2  lg:grid-cols-3  " variants={cardVariants}>
         {PricingData.map((item, index) => (
           <PricingCard
             key={index}

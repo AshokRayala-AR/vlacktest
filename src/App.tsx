@@ -1,4 +1,3 @@
-// App.tsx
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Aboutus from "./components/aboutus/Aboutus";
 import Blog from "./components/blog/Blog";
@@ -26,7 +25,7 @@ function App() {
         <Route path={"/portfolio"} element={<Portfolio />} />
         <Route path={"/pricing"} element={<Pricing />} />
         <Route path={"/feature"} element={<Features />} />
-        <Route path={"/ReadBlog"} element={<Readblog />} />
+        <Route path={"/readblog"} element={<Readblog />} />
         <Route path={"/about"} element={<Aboutus />} />
       </Routes>
       <Footer />

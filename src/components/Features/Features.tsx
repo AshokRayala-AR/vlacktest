@@ -1,10 +1,10 @@
 import ClientPage from "./client/ClientPage";
-import WorkingBenefitsPage from "./workingbenefits/WorkingBenefitsPage";
+import BenefitsPage from "../aboutus/benefits/BenefitsPage";
 
 function Features() {
   return (
     <div className={`main_head overflow-hidden`}>
-      <WorkingBenefitsPage />
+      <BenefitsPage/>
       <ClientPage />
     </div>
   );

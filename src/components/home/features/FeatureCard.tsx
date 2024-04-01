@@ -6,7 +6,7 @@ export default function FeatureCard() {
   const { t } = useTranslation();
   return (
     <motion.div
-      className="md:grid md:grid-cols-2 md:gap-4 lg:grid lg:grid-cols-3 lg:gap-4 mt-14 w-5/6"
+      className="grid grid-cols-1 md:grid md:grid-cols-2 md:gap-4 lg:grid lg:grid-cols-3 lg:gap-4 w-5/6"
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.1 }}

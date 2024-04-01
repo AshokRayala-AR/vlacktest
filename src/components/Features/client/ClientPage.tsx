@@ -11,10 +11,10 @@ function ClientPage() {
         viewport={{ once: true, amount: 0.2 }}>
             {ClientData.map(item => {
                 return (
-                    <motion.div key={item.id} className={` lg:flex items-center justify-center gap-24 w-screen ${
+                    <motion.div key={item.id} className={` md:flex items-center justify-center gap-24 w-screen ${
                         item.id % 2 === 0 ? "flex-row-reverse bg-[#F4F6FC]" : "flex-row"
                       }`}  variants={cardVariants}>
-                        <div className="text-center md:text-left flex flex-col md:flex md:flex-col gap-4 p-6 md:w-2/6 justify-center ">
+                        <div className="text-center md:text-left flex flex-col md:flex md:flex-col gap-4 p-6 md:w-2/6 justify-center">
                             <h5 className="font-semibold">{ t(`${item.label}`)}</h5>
                             <h1 className=" text-3xl font-semibold ">{ t(`${item.title}`)}</h1>
                             <p className="text-base ">{ t(`${item.content}`)}</p>
