@@ -20,28 +20,26 @@ function BenefitsPage() {
         <h1 className="font-bold text-3xl">{t("abt-us-benfits-ttl")}</h1>
       </motion.div>
 
-      <div className=" gap-4 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 lg:gap-4  w-5/6 mb-4 ">
-        {Data.map((item) => (
-          <motion.div
-            initial="offscreen"
+      <motion.div initial="offscreen"
             whileInView="onscreen"
-            viewport={{ once: true, amount: 0.8 }}
-          >
+            viewport={{ once: true, amount: 0.8 }} className=" grid grid-cols-1 md:grid md:grid-cols-2 md:gap-4 lg:grid lg:grid-cols-3 lg:gap-4 w-5/6">
+        {Data.map((item) => (
+          
             <motion.div
-              className=" md:text-left p-6 bg-[#f4f6fc] "
+              className=" text-left p-6 bg-[#eef4fa] shadow-md mb-4"
               variants={cardVariants}
             >
-              <div className="flex justify-center mb-4 md:justify-start">
-                <item.svg />{" "}
+              <div className="flex justify-center mb-4 md:justify-start ">
+                <item.svg />
               </div>
               <h1 className="flex justify-center text-xl font-semibold mb-4 md:justify-start">
                 {t(`${item.title}`)}
               </h1>
               <p className="text-justify mb-4">{t(`${item.content}`)}</p>
             </motion.div>
-          </motion.div>
+          
         ))}
-      </div>
+      </motion.div>
     </motion.div>
   );
 }

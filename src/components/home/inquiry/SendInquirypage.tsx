@@ -44,7 +44,7 @@ function SendInquiryPage() {
         <div className="imgb  h-full p-5 gap-6 bg-opacity-30 hidden md:text-left lg:flex lg:flex-col lg:justify-center lg:items-center md:w-3/6">
           <motion.div variants={cardVariants}>
             <h1 className="text-3xl font-large lg:leading-[53px]">
-              home-form-ttl {t("home-form-ttl")}
+             {t("home-form-ttl")}
             </h1>
             <p className="text-base font-md leading-[26px]">
               {t("home-form-desc")}

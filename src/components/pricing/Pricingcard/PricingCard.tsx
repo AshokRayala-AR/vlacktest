@@ -21,7 +21,7 @@ export default function PricingCard({
       onClick={handleClick}
     >
       <div>
-        <div className="  sm:flex sm:flex-col lg:flex lg:flex-col gap-4 z-1 ">
+        <div className="flex flex-col gap-5  z-1 ">
           <div className="flex flex-col gap-4">
             <p className="text-3xl font-bold flex items-center gap-2">
               {t(`${item.amount}`)}

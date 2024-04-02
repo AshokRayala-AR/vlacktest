@@ -1,5 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { PortfolioType } from "../../../utils/types/Types";
+import { cardVariants } from '../../../utils/scrolls/Scroll'
+import { motion } from "framer-motion";
 export default function PortfolioCard({
   item,
   key,
@@ -10,9 +12,15 @@ export default function PortfolioCard({
   const { t } = useTranslation();
 
   return (
-    <div key={key} className="flex flex-col gap-2 items-center">
+    <motion.div
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0.1 }}
+      key={key}
+      className="flex flex-col gap-2 items-center"
+    >
       <div className=" ">
-        <img
+        <motion.img variants={cardVariants} 
           className="w-screen border-x-[39px] border-y-[30px] md:w-[545px] h-[317px]  object-contain object-center"
           style={{
             borderImage: `${item.border}`,
@@ -26,9 +34,9 @@ export default function PortfolioCard({
         <p className="text-sm">{t(`${item.description}`)}</p>
 
         <a className="text-sm font-medium" href="">
-        {t(`${item.view}`)} &rarr;
+          {t(`${item.view}`)} &rarr;
         </a>
       </div>
-    </div>
+    </motion.div>
   );
 }
