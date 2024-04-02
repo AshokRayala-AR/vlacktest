@@ -4,6 +4,7 @@ import { z } from "zod";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { cardVariants } from "../../../utils/scrolls/Scroll";
+import axios from "axios";
 
 const schema = z.object({
   name: z.string().min(3).max(20),
@@ -26,11 +27,19 @@ export default function ContactUsComponent() {
   } = useForm<FormFields>({
     resolver: zodResolver(schema),
   });
-
-  const onSubmit = () => {
-    reset();
+  
+  const onSubmit = async (data: FormFields) => {
+    try {
+      const response = await axios.post('https://jsonplaceholder.typicode.com/posts', data);
+      console.log("Response:", response);
+      reset();
+    } catch (error) {
+      console.error('Error submitting form:', error);
+    }
   };
+  
   const { t } = useTranslation();
+  
   return (
     <motion.div className="flex flex-col gap-4 md:gap-10" 
     initial="offscreen"
@@ -183,6 +192,7 @@ export default function ContactUsComponent() {
               <button
                 type="submit"
                 className=" px-10 py-2 bg-[#282938] text-white p-2 rounded-full"
+                onClick={handleSubmit(onSubmit)}
               >
                 {t("cntct-us-send-btntxt")}
               </button>
