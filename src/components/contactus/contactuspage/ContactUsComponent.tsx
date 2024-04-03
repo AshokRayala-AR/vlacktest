@@ -41,7 +41,7 @@ export default function ContactUsComponent() {
   const { t } = useTranslation();
   
   return (
-    <motion.div className="flex flex-col gap-4 md:gap-10" 
+    <motion.div className="flex flex-col gap-4 pt-5 md:gap-10" 
     initial="offscreen"
     whileInView="onscreen"
     viewport={{ once: true, amount: 0.1 }}>

@@ -3,7 +3,7 @@ const PricingData = [
     amount: "pricing-crd1-mrp",
     amountSpan: "pricing-crd1-mrp-desc",
     title: "pricing-crd1-ttl",
-    description: "pricing-crd1-desc ",
+    description: "pricing-crd1-desc",
     btnDescription: "pricing-btn-getstarted",
     list: [
       "pricing-crd1-link1",

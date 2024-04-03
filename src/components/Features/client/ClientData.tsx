@@ -9,7 +9,7 @@ export const ClientData = [
         id: 1,
         img: feature1,
         label: "ftrs-tm-wrk-card1-ttl",
-        title: "ftrs-tm-wrk-card1-desc ",
+        title: "ftrs-tm-wrk-card1-desc",
         content : "ftrs-tm-wrk-card1-content"
     },
     {
@@ -30,7 +30,7 @@ export const ClientData = [
         id: 4,
         img: feature1,
         label: "ftrs-tm-wrk-card4-ttl",
-        title: "ftrs-tm-wrk-card4-desc ",
+        title: "ftrs-tm-wrk-card4-desc",
         content : "ftrs-tm-wrk-card4-content"
     }
 
