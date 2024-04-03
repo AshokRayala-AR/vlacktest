@@ -11,20 +11,20 @@ function ClientPage() {
     whileInView="onscreen"
     viewport={{ once: true, amount: 0.3 }}>
       <div className="gap-8 lg:w-2/6 flex flex-col justify-center items-center md:flex-row  md:gap-4">
-        <h1 className="text-4xl leading-[40px] font-semibold lg:text-4xl  lg:leading-[46px] lg:line-clamp-2">
+        <h1 className="text-2xl leading-[40px] font-semibold lg:text-4xl  lg:leading-[46px] lg:line-clamp-2">
           {t("h-w-w-clnt-review-ttl")}
         </h1>
         
       </div>
 
-      <div className="flex-row lg:w-4/6 flex flex-col gap-8">
+      <div className="lg:w-4/6 flex flex-col gap-8">
         <motion.div variants={cardVariants}>
           <h1 className="sm: items-center text-2xl leading-[38px] font-medium lg:leading-[48px]">
             {t('h-w-w-clnt-review-desc')}
           </h1>
         </motion.div>
 
-        <motion.div className="flex flex-col items-center gap-4 md:flex-row justify-between items-end" variants={cardVariants}>
+        <motion.div className="flex flex-col gap-4 md:flex-row justify-between items-end" variants={cardVariants}>
           <div className="flex md:flex-row gap-4 justify-center items-center">
             <img
               src={clinet1}

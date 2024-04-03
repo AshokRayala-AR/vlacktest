@@ -17,7 +17,7 @@ export default function Navbar() {
             >
               <h6 className={`text-xl md:text-4xl`}>Vlack</h6>
               <h6 className={`text-xl md:text-base md:ml-3`}>
-                Solutions Pvt Ltd.
+                Solutions 
               </h6>
             </div>
           </div>

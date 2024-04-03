@@ -19,8 +19,7 @@ export default function FeatureCard() {
             variants={cardVariants}
           >
             <div className="flex justify-center mb-4 md:justify-start ">
-              {" "}
-              <itemFe.svg />{" "}
+              <itemFe.svg />
             </div>
             <h1 className=" flex justify-center text-xl font-semibold mb-4 md:justify-start ">
               {t(`${itemFe.title}`)}

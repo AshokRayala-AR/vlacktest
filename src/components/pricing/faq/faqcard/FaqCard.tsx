@@ -26,9 +26,9 @@ export default function AccordionItem({
         </div>
         <div>
           <button
-            onClick={(event) => {
-              event.stopPropagation();
-            }}
+            // onClick={(event) => {
+            //   event.stopPropagation();
+            // }}
           >
             <svg
               className={`w-6 h-6 transition-transform duration-300 transform ${

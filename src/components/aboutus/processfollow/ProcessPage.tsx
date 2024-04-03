@@ -35,9 +35,6 @@ function ProcessPage() {
                   </h1>
                 </div>
               </div>
-              <h1 className="font-semibold font-3xl mt-2 mb-2 md:mt-4 md:mb-4">
-                {t(`${item.title}`)}
-              </h1>
               <p className="text-base ">{t(`${item.content}`)}</p>
             </motion.div>
           );

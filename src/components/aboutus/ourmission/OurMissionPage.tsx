@@ -14,7 +14,7 @@ function OurMissionPage() {
       viewport={{ once: true, amount: 0.1 }}
     >
       <motion.div
-        className="w-full md:flex md:h-3/6 justify-center item-center md:gap-24"
+        className="w-full shadow-md md:flex md:h-3/6 justify-center item-center md:gap-24"
         variants={cardVariants}
       >
         <div className="text-center md:text-left flex flex-col gap-3 justify-center p-4 md:w-3/6">
@@ -32,10 +32,10 @@ function OurMissionPage() {
       </motion.div>
 
       <motion.div
-        className="divb md:flex h-3/6 justify-center md:gap-24"
+        className="w-full shadow-md md:flex md:h-3/6 justify-center item-center md:gap-24"
         variants={cardVariants}
       >
-        <div className="text-center md:text-left flex flex-col gap-6 justify-center p-4 md:w-2/6 md:order-2">
+        <div className="text-center md:text-left flex flex-col gap-3 justify-center p-4 md:w-3/6 md:order-2">
           <h5 className="font-normal ">{t("abt-us-vision")}</h5>
           <h1 className="text-5xl font-semibold">{t("abt-us-vis-title")}</h1>
           <p className="text-base">{t("abt-us-vis-desc")}</p>

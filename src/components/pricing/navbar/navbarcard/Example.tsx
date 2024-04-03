@@ -1,4 +1,4 @@
-import { useRef, useEffect, RefObject } from "react";
+import { useRef, useEffect, useState,RefObject } from "react";
 import { motion, useCycle } from "framer-motion";
 import { useDimensions } from "./UseDimensions";
 import { MenuToggle } from "./MenuToggle";
@@ -26,16 +26,13 @@ const sidebar = {
 
 export const Example = () => {
   const [isOpen, toggleOpen] = useCycle(false, true);
-  const containerRef:RefObject<HTMLDivElement> = useRef(null);
+  const containerRef: RefObject<HTMLDivElement> = useRef(null);
   const { height } = useDimensions(containerRef);
-
-  const closeMenu = () => {
-    toggleOpen();
-  };
+  const [isAnimating, setIsAnimating] = useState(false);
 
   useEffect(() => {
     const handleOutsideClick = (event: MouseEvent) => {
-      const targetNode = event.target as Node; 
+      const targetNode = event.target as Node;
       if (
         containerRef.current &&
         !containerRef.current.contains(targetNode) &&
@@ -50,6 +47,13 @@ export const Example = () => {
       document.removeEventListener("mousedown", handleOutsideClick);
     };
   }, [containerRef, isOpen, toggleOpen]);
+  const onAnimationStart = () => {
+    setIsAnimating(true);
+  };
+
+  const onAnimationComplete = () => {
+    setIsAnimating(false);
+  };
 
   return (
     <motion.nav
@@ -57,10 +61,13 @@ export const Example = () => {
       animate={isOpen ? "open" : "closed"}
       custom={height}
       ref={containerRef}
+      className=""
+      onAnimationStart={onAnimationStart}
+      onAnimationComplete={onAnimationComplete}
     >
       <motion.div className="background" variants={sidebar} />
-      <Navigation closeMenu={closeMenu} />
-      <MenuToggle toggle={() => toggleOpen()} />
+      {isOpen || isAnimating ? <Navigation closeMenu={toggleOpen} /> : null}
+      <MenuToggle toggle={toggleOpen} />
     </motion.nav>
   );
 };

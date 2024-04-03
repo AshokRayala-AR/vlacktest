@@ -1,5 +1,6 @@
 import logoVlack from "../../../../assets/images/logoVlack.png";
 import { useTranslation } from "react-i18next";
+import { NavLink } from "react-router-dom";
 export default function MobiFooter() {
   const { t } = useTranslation();
   return (
@@ -10,38 +11,36 @@ export default function MobiFooter() {
       </div>
       <div className="flex justify-between mb-4">
         <div className="flex flex-col gap-3">
-          <h1 className="text-lg font-semibold">Reach Us</h1>
+          <h1 className="text-lg font-semibold">{t("mobl-ftr-rch-us")}</h1>
           <div>
             <img src="" alt="" />
-            <p>+91 9392245979</p>
+            <p>{t("ftr-call-num")}</p>
           </div>
           <div>
             <img src="" alt="" />
-            <p>contact@vlacksolutions.com</p>
+            <p>{t("ftr-email")}</p>
           </div>
         </div>
         <div className="flex flex-col gap-3">
-          <h1 className="text-lg font-semibold">Company</h1>
-          <p>About</p>
-          <p>Contact</p>
-          <p>Blogs</p>
+          <h1 className="text-lg font-semibold">{t("mobl-ftr-company")}</h1>
+          <p>{t("mobl-ftr-about")}</p>
+          <p>{t("mobl-ftr-contact")}</p>
+          <p>{t("mobl-ftr-blogs")}</p>
         </div>
       </div>
       <div className="mb-4">
         <img src="" alt="" />
-        <p className="w-4/6">
-          Plot No.60, 2nd Floor, Swamy Ayyappa Housing Society, Khanamet,
-          Madhapur, Serilingampally, Rangareddy Dist., Telangana - 500081
-        </p>
+        <p className="w-4/6">{t("mobl-ftr-address")}</p>
       </div>
       <div className="flex justify-between ">
         <div className="flex flex-col gap-3 h-[200px]">
-          <h1 className="text-lg font-semibold">Legal</h1>
-          <h1>Privacy Policy</h1>
-          <h1>Terms & Services</h1>
-          <h1>Terms of Use</h1>
-          <h1>Refund Policy</h1>
-          <h1>Follow Us</h1>
+          <h1 className="text-lg font-semibold">{t("")}</h1>
+          <h1>{t("mobl-ftr-legal")}</h1>
+          <h1>{t("mobl-ftr-pri-pol")}</h1>
+          <h1>{t("mobl-ftr-terms-serv")}</h1>
+          <h1>{t("mobl-ftr-terms-use")}</h1>
+          <h1>{t("mobl-ftr-refnd")}</h1>
+          <h1>{t("mobl-ftr-follow")}</h1>
           <div>
             <img src="" alt="" />
             <img src="" alt="" />
@@ -49,7 +48,7 @@ export default function MobiFooter() {
             <img src="" alt="" />
           </div>
         </div>
-        {/* <div>
+        <div>
           <ul className="flex flex-col gap-3">
             <>
               <li className="text-lg font-semibold">QuickLinks</li>
@@ -64,7 +63,7 @@ export default function MobiFooter() {
               </ul>
             </>
           </ul>
-        </div> */}
+        </div>
       </div>
     </div>
   );
