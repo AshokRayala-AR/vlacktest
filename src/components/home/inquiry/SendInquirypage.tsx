@@ -5,8 +5,9 @@ import { useTranslation } from "react-i18next";
 import { z } from "zod";
 import { motion } from "framer-motion";
 import { cardVariants } from "../../../utils/scrolls/Scroll";
-import useWindoWidth from "../../../hooks/useWindoWidth.tsx";
-import { Link } from "react-router-dom";
+
+import axios from "axios";
+
 
 const schema = z.object({
   Name: z.string().min(3),
@@ -26,10 +27,19 @@ function SendInquiryPage() {
   console.log("width");
   console.log(width);
 
-  const onSubmit: SubmitHandler<FormFields> = (data) => {
-    console.log(data);
+  const onSubmit: SubmitHandler<FormFields> = async (data) => {
+    try {
+      const response = await axios.post("https://jsonplaceholder.typicode.com/posts", data);
+      console.log("Response: ", response);
+      
+    }
+    catch(error) {
+      console.error("Error Submitting Form: ", error)
+    }
   };
   const { t } = useTranslation();
+
+  
   return (
     <motion.div
       className="md:p-24 text-white"
@@ -106,7 +116,9 @@ function SendInquiryPage() {
             <div className="flex flex-col items-center gap-6 mt-2">
               <button
                 type="submit"
-                className="bg-[#FCD980] text-black py-2 rounded-full w-4/6 "
+                className="bg-[#FCD980] text-black p-2 rounded-full w-full md:px-16 md:p-4 lg:w-full"
+                onClick={handleSubmit(onSubmit)}
+
               >
                 {t("home-form-btn")}
               </button>
