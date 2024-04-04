@@ -1,6 +1,6 @@
 export const DesignProjectData = [
   {
-    title: " dsgn-case-abt-prjct-ttl",
+    title: "dsgn-case-abt-prjct-ttl",
     description: "dsgn-case-abt-prjct-desc",
     list: [
       "dsgn-case-abt-prjct-list1",
@@ -9,7 +9,7 @@ export const DesignProjectData = [
     ],
   },
   {
-    title: " dsgn-case-h-w-d-ttl",
+    title: "dsgn-case-h-w-d-ttl",
     description: "dsgn-case-h-w-d-desc",
     list: [
       "dsgn-case-h-w-d-list1",
@@ -32,7 +32,7 @@ export const DeliverableData = [
 ];
 
 export const KeywordsData = [
-  { title: "dsgn-case-keywords-list1" },
+  // { title: "dsgn-case-keywords-list1" },
   { title: "dsgn-case-keywords-list2" },
   { title: "dsgn-case-keywords-list3" },
   { title: "dsgn-case-keywords-list4" },

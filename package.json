@@ -24,6 +24,7 @@
     "react-router-dom": "^6.22.3",
     "rollup": "^4.13.0",
     "use-dimensions": "^2.0.0",
+    "wavesurfer.js": "^7.7.8",
     "zod": "^3.22.4"
   },
   "devDependencies": {

@@ -1,5 +1,5 @@
 import { useTranslation } from "react-i18next";
-import WelcomeSvg from "./WelcomeSvg";
+import vlackIntro from "../../../assets/videos/vlackIntro.mp4";
 import { motion } from "framer-motion";
 import { cardVariants } from "../../../utils/scrolls/Scroll";
 import { useNavigate } from "react-router-dom";
@@ -37,10 +37,18 @@ export default function WelcomePage() {
         </div>
       </motion.div>
       <motion.div
-        className="w-full h-full flex justify-center  lg:w-3/6 lg:p-5 "
+        className="w-full h-full flex justify-center  md:w-3/6  lg:p-5 "
         variants={cardVariants}
       >
-        <WelcomeSvg />
+        <video
+          id="welcomeVideo"
+          className="md:min-h-[340px] md:min-w-[450px] w-full rounded-md"
+          controls
+          autoPlay
+          muted
+        >
+          <source src={vlackIntro} type="video/mp4" />
+        </video>
       </motion.div>
     </motion.div>
   );
