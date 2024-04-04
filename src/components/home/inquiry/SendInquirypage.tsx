@@ -7,7 +7,8 @@ import { motion } from "framer-motion";
 import { cardVariants } from "../../../utils/scrolls/Scroll";
 
 import axios from "axios";
-
+import { Link } from "react-router-dom";
+import useWindoWidth from "../../../hooks/useWindoWidth.tsx";
 
 const schema = z.object({
   Name: z.string().min(3),
@@ -29,17 +30,17 @@ function SendInquiryPage() {
 
   const onSubmit: SubmitHandler<FormFields> = async (data) => {
     try {
-      const response = await axios.post("https://jsonplaceholder.typicode.com/posts", data);
+      const response = await axios.post(
+        "https://jsonplaceholder.typicode.com/posts",
+        data,
+      );
       console.log("Response: ", response);
-      
-    }
-    catch(error) {
-      console.error("Error Submitting Form: ", error)
+    } catch (error) {
+      console.error("Error Submitting Form: ", error);
     }
   };
   const { t } = useTranslation();
 
-  
   return (
     <motion.div
       className="md:p-24 text-white"
@@ -54,7 +55,7 @@ function SendInquiryPage() {
         <div className="imgb  h-full p-5 gap-6 bg-opacity-30 hidden md:text-left lg:flex lg:flex-col lg:justify-center lg:items-center md:w-3/6">
           <motion.div variants={cardVariants}>
             <h1 className="text-3xl font-large lg:leading-[53px]">
-             {t("home-form-ttl")}
+              {t("home-form-ttl")}
             </h1>
             <p className="text-base font-md leading-[26px]">
               {t("home-form-desc")}
@@ -118,7 +119,6 @@ function SendInquiryPage() {
                 type="submit"
                 className="bg-[#FCD980] text-black p-2 rounded-full w-full md:px-16 md:p-4 lg:w-full"
                 onClick={handleSubmit(onSubmit)}
-
               >
                 {t("home-form-btn")}
               </button>
