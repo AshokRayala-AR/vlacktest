@@ -45,6 +45,7 @@ export const PortfolioSchema = z.object({
   description: z.string(),
   view: z.string(),
   border: z.string(),
+  link:z.string()
 });
 
 export type PortfolioType = z.infer<typeof PortfolioSchema>;

@@ -7,7 +7,7 @@ import DesignKeywords from "./designcasecomp/DesignKeywords";
 import DesignTogether from "./designcasecomp/DesignTogether";
 export default function DesignCaseComp() {
   return (
-    <div className="sm:p-5 md:p-8 ">
+    <div className="main_head p-5 md:p-14 lg:p-20">
       <DesignCaseHeader />
       <DesignCaseCard />
       <DesignAboutProject />

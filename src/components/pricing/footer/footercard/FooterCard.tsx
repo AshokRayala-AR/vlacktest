@@ -31,8 +31,7 @@ export default function FooterCard() {
           </div>
           <div className="bg-[#FCD980] text-black   ">
             <p className="text-sm px-5 py-2 font-medium">
-              Plot No.60, 2nd Floor, Swamy Ayyappa Housing Society, Khanamet,
-              Madhapur, Serilingampally, Rangareddy Dist., Telangana - 500081
+              {t("mobl-ftr-address")}
             </p>
           </div>
         </div>

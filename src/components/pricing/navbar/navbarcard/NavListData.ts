@@ -4,6 +4,6 @@ export const NavListComplData = [
   { navLink: "nav-features", route: "/feature" },
   { navLink: "nav-pricing", route: "/pricing" },
   { navLink: "nav-portfolio", route: "/portfolio" },
-  { navLink: "nav-blog", route: "/blogs" },
+  { navLink: "nav-design", route: "/design" },
   { navLink: "nav-btn-contactus", route: "/contact" },
 ];

@@ -1,8 +1,9 @@
-
 import { Example } from "./Example";
 import { NavLink } from "react-router-dom";
 import Logo from "../../../../assets/images/logoVlack.png";
 import NavListComp from "./NavListComp";
+import AudioPlayer from "../audiospectrum/AudioPlayer";
+import Music from "../../../../assets/audio/audioAir.wav";
 export default function Navbar() {
   return (
     <div className="w-full">
@@ -16,12 +17,11 @@ export default function Navbar() {
               className={`flex gap-2 text-red-500 md:ml-3 md:flex-col md:gap-0`}
             >
               <h6 className={`text-xl md:text-4xl`}>Vlack</h6>
-              <h6 className={`text-xl md:text-base md:ml-3`}>
-                Solutions 
-              </h6>
+              <h6 className={`text-xl md:text-base md:ml-3`}>Solutions</h6>
             </div>
           </div>
         </NavLink>
+        <div><AudioPlayer src={Music}/></div>
         <div className="flex justify-center items-center">
           <div className="md:hidden">
             <Example />
