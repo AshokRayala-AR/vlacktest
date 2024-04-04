@@ -21,9 +21,7 @@ export default function Navbar() {
             </div>
           </div>
         </NavLink>
-        <div className="">
-          <AudioPlayer src={Music} />
-        </div>
+        <div className=""></div>
         <div className="flex justify-center items-center">
           <div className="md:hidden">
             <Example />

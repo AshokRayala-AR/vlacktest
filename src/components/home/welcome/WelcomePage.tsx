@@ -3,10 +3,20 @@ import vlackIntro from "../../../assets/videos/vlackIntro.mp4";
 import { motion } from "framer-motion";
 import { cardVariants } from "../../../utils/scrolls/Scroll";
 import { useNavigate } from "react-router-dom";
+import { useEffect, useRef } from "react";
 
 export default function WelcomePage() {
   const { t } = useTranslation();
   const navigate = useNavigate();
+  const videoRef: any = useRef(null);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current
+        .play()
+        .catch((error: Error) => console.log("Video play failed", error));
+    }
+  }, []);
   return (
     <motion.div
       className="text-white bg-[#1C1E53]  flex flex-col gap-8  w-full  p-6 pt-14  lg:flex-row justify-center items-center lg:p-24 "
@@ -41,11 +51,11 @@ export default function WelcomePage() {
         variants={cardVariants}
       >
         <video
+          ref={videoRef}
           id="welcomeVideo"
           className="md:min-h-[340px] md:min-w-[450px] w-full rounded-md"
           controls
-          autoPlay
-          muted
+          autoPlay={true}
         >
           <source src={vlackIntro} type="video/mp4" />
         </video>
