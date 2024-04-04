@@ -1,5 +1,11 @@
 import { z } from "zod";
-
+export interface AudioPlayerProps {
+  src: string; 
+}
+export interface HTMLAudioElementExtended extends HTMLAudioElement {
+  play: () => Promise<void>; 
+  pause: () => void; 
+}
 export const IconSchema = z.object({
   id: z.string(),
   title: z.string(),

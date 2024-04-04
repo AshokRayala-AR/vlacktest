@@ -1,9 +1,10 @@
-
-
 import { useState, useRef } from "react";
-
-const AudioPlayer = ({ src }) => {
-  const audioRef = useRef(null);
+import {
+  AudioPlayerProps,
+  HTMLAudioElementExtended,
+} from "../../../../utils/types/Types";
+const AudioPlayer = ({ src }: AudioPlayerProps) => {
+  const audioRef = useRef<HTMLAudioElementExtended>(null);
   const [isPlaying, setIsPlaying] = useState(false);
 
   const togglePlay = () => {
@@ -23,7 +24,7 @@ const AudioPlayer = ({ src }) => {
       <audio ref={audioRef} src={src} />
       <button
         onClick={togglePlay}
-        className="w-12 h-12 bg-white border-2 border-sky-200 rounded-full text-[#93C5FD]"
+        className="lg:w-20 lg:h-20 h-10 w-10 bg-transparent border-2 border-sky-200 rounded-full text-[#93C5FD]"
       >
         tap
       </button>
