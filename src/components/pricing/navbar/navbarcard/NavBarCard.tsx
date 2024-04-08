@@ -2,8 +2,7 @@ import { Example } from "./Example";
 import { NavLink } from "react-router-dom";
 import Logo from "../../../../assets/images/logoVlack.png";
 import NavListComp from "./NavListComp";
-import AudioPlayer from "../audiospectrum/AudioPlayer";
-import Music from "../../../../assets/audio/audioAir.wav";
+
 export default function Navbar() {
   return (
     <div className="w-full">
@@ -21,7 +20,7 @@ export default function Navbar() {
             </div>
           </div>
         </NavLink>
-        <div className=""></div>
+
         <div className="flex justify-center items-center">
           <div className="md:hidden">
             <Example />
