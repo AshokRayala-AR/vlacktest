@@ -1,9 +1,6 @@
-import { Example } from "./Example";
 import { NavLink } from "react-router-dom";
 import Logo from "../../../../assets/images/logoVlack.png";
 import NavListComp from "./NavListComp";
-import AudioPlayer from "../audiospectrum/AudioPlayer";
-import Music from "../../../../assets/audio/audioAir.wav";
 export default function Navbar() {
   return (
     <div className="w-full">
@@ -23,9 +20,7 @@ export default function Navbar() {
         </NavLink>
         <div className=""></div>
         <div className="flex justify-center items-center">
-          <div className="md:hidden">
-            <Example />
-          </div>
+          <div className="md:hidden"></div>
           <div className="hidden md:flex">
             <NavListComp />
           </div>
