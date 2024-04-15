@@ -55,7 +55,6 @@ export default function WelcomePage() {
           id="welcomeVideo"
           className="md:min-h-[340px] md:min-w-[450px] w-full rounded-md"
           controls
-          autoPlay={true}
         >
           <source src={vlackIntro} type="video/mp4" />
         </video>
