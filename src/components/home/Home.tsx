@@ -10,7 +10,7 @@ const Home = () => {
   return (
     <div className={`main_head`}>
       <WelcomePage />
-      <VideoPlayer />
+      <VideoPlayer src={""} />
       <HowWeWorkPage />
       <FeaturePage />
       <SendInquiryPage />
