@@ -1,20 +1,18 @@
-import { useRef, useEffect, useState,RefObject } from "react";
+import { useRef, useEffect, useState, RefObject } from "react";
 import { motion, useCycle } from "framer-motion";
 import { useDimensions } from "./UseDimensions";
 import { MenuToggle } from "./MenuToggle";
 import { Navigation } from "./Navigation";
 
 const sidebar = {
-  open: (height = 1000) => ({
-    clipPath: `circle(${height * 2 + 200}px at 40px 40px)`,
+  open: {
     transition: {
       type: "spring",
       stiffness: 20,
       restDelta: 2,
     },
-  }),
+  },
   closed: {
-    clipPath: "circle(30px at 40px 40px)",
     transition: {
       delay: 0.5,
       type: "spring",
@@ -46,7 +44,7 @@ export const Example = () => {
     return () => {
       document.removeEventListener("mousedown", handleOutsideClick);
     };
-  }, [containerRef, isOpen, toggleOpen]);
+  }, [containerRef, isOpen]);
   const onAnimationStart = () => {
     setIsAnimating(true);
   };
@@ -65,7 +63,7 @@ export const Example = () => {
       onAnimationStart={onAnimationStart}
       onAnimationComplete={onAnimationComplete}
     >
-      <motion.div className="background" variants={sidebar} />
+      <motion.div variants={sidebar} />
       {isOpen || isAnimating ? <Navigation closeMenu={toggleOpen} /> : null}
       <MenuToggle toggle={toggleOpen} />
     </motion.nav>

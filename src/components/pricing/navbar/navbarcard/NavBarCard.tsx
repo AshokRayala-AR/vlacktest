@@ -1,6 +1,7 @@
 import { NavLink } from "react-router-dom";
 import Logo from "../../../../assets/images/logoVlack.png";
 import NavListComp from "./NavListComp";
+import { Example } from "./Example.tsx";
 
 export default function Navbar() {
   return (
@@ -19,8 +20,10 @@ export default function Navbar() {
             </div>
           </div>
         </NavLink>
-
         <div className="flex justify-center items-center">
+          <div className="lg:hidden md:hidden">
+            <Example />
+          </div>
           <div className="md:hidden"></div>
           <div className="hidden md:flex">
             <NavListComp />

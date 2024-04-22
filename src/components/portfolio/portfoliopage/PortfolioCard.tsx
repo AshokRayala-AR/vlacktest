@@ -3,15 +3,10 @@ import { PortfolioType } from "../../../utils/types/Types";
 import { cardVariants } from "../../../utils/scrolls/Scroll";
 import { motion } from "framer-motion";
 
-export default function PortfolioCard({
-  item,
-  key,
-}: {
-  item: PortfolioType;
-  key: number;
-}) {
+export default function PortfolioCard({ item }: { item: PortfolioType }) {
   const { t } = useTranslation();
-  function handleGoToWebsite(link:string) {
+
+  function handleGoToWebsite(link: string) {
     window.open(`https://${link}`, "_blank");
   }
   return (
@@ -19,7 +14,6 @@ export default function PortfolioCard({
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.1 }}
-      key={key}
       className="flex flex-col gap-2 items-center"
     >
       <div className=" ">
@@ -37,7 +31,12 @@ export default function PortfolioCard({
         <h1 className="text-xl font-semibold">{t(`${item.title}`)}</h1>
         <p className="text-sm">{t(`${item.description}`)}</p>
 
-        <div className="text-sm font-medium" onClick={() => { handleGoToWebsite(item.link) }}>
+        <div
+          className="text-sm font-medium"
+          onClick={() => {
+            handleGoToWebsite(item.link);
+          }}
+        >
           {t(`${item.view}`)} &rarr;
         </div>
       </div>
