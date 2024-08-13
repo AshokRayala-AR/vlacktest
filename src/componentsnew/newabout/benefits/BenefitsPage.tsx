@@ -8,7 +8,7 @@ function BenefitsPage() {
   const { t } = useTranslation();
   return (
     <motion.div
-      className="flex flex-col gap-12 justify-center items-center bg-black p-12 "
+      className="flex flex-col gap-12 justify-center items-center bg-black p-6 "
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.1 }}
@@ -32,7 +32,7 @@ function BenefitsPage() {
         initial="offscreen"
         whileInView="onscreen"
         viewport={{ once: true, amount: 0.8 }}
-        className=" grid grid-cols-1 md:grid md:grid-cols-2 md:gap-6 lg:grid lg:grid-cols-3 lg:gap-6 w-5/6"
+        className=" grid grid-cols-1 md:grid md:grid-cols-2 md:gap-6 lg:grid lg:grid-cols-3 lg:gap-6 "
       >
         {Data.map((item, index) => (
           <motion.div

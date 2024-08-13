@@ -24,7 +24,7 @@ function ClientPage() {
             } `}
             variants={cardVariants}
           >
-            <div className="text-center md:text-left flex flex-col gap-4 p-6 md:w-2/6 justify-center">
+            <div className="text-center md:text-left flex flex-col gap-4 py-6 md:w-2/6 justify-center">
               <h5 className="font-semibold text-[#f87005]">
                 {t(`${item.label}`)}
               </h5>
@@ -33,7 +33,7 @@ function ClientPage() {
               </h1>
             </div>
 
-            <div className="md:w-2/6 md:h-2/6 lg:w-2/6 lg:h-2/6 p-12 md:p-8 rounded-xl">
+            <div className="md:w-2/6 md:h-2/6 lg:w-2/6 lg:h-2/6 p-4 md:p-8 rounded-xl">
               <div className="overflow-hidden rounded-xl">
                 <motion.img
                   whileHover={{

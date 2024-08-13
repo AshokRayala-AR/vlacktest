@@ -9,13 +9,13 @@ function ServicesComp() {
   const [index, setIndex] = useState(0);
 
   const [selectedIndex, setSelectedIndex] = useState(ServicesData[0]);
-  const [hoveredIndex, setHoveredIndex] = useState(null);
+  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
 
   useEffect(() => {
     setSelectedIndex(ServicesData[index]);
   }, [index]);
 
-  const handleClick = (clickedIndex) => {
+  const handleClick = (clickedIndex: number) => {
     setIndex(clickedIndex);
   };
 

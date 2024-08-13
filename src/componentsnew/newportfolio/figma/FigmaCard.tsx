@@ -19,7 +19,7 @@ export default function UxCard({ item }: { item: PortfolioType }) {
       <div className="md:w-[300px] min-w-[280px] max-w-[280px] md:min-h-[200px] lg:min-w-[400px] lg:min-h-[320px] xl:min-w-[500px]  max-w-[90vw] md:max-w-[60vw]">
         <motion.img
           variants={cardVariants}
-          className="w-screen border-x-[39px] border-y-[30px] md:min-h-[200px]  object-cover object-center lg:min-w-[400px] lg:min-h-[320px] xl:min-w-[500px]"
+          className="w-screen border-x-[39px] border-y-[30px] md:min-h-[200px] md:max-w-[40vw]  object-cover object-center lg:min-w-[400px] lg:min-h-[300px] xl:min-w-[500px]"
           style={{
             borderImage: `${item.border}`,
           }}

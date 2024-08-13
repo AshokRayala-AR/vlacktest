@@ -2,6 +2,7 @@ import { useTranslation } from "react-i18next";
 import { SlidesData } from "./SlideData";
 import { useState } from "react";
 import { motion } from "framer-motion";
+import { SlidesItem } from "../../../utils/types/Types";
 
 function SlideComp() {
   const [index, setIndex] = useState(0);
@@ -9,7 +10,7 @@ function SlideComp() {
 
   const backgroundImage = SlidesData[index].img;
 
-  function indexUpdate(idx) {
+  function indexUpdate(idx: number) {
     setIndex(idx);
   }
 
@@ -22,7 +23,7 @@ function SlideComp() {
         style={{ backgroundImage: `url(${backgroundImage}) ` }}
       >
         <div className="grid grid-cols-2 md:grid-cols-4 h-full">
-          {SlidesData.map((item, idx) => (
+          {SlidesData.map((item: SlidesItem, idx) => (
             <div
               key={idx}
               className="border lg:border-r h-full flex flex-col justify-end relative overflow-hidden"

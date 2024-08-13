@@ -8,7 +8,7 @@ import { useEffect, useRef } from "react";
 export default function WelcomePage() {
   const { t } = useTranslation();
   const navigate = useNavigate();
-  const videoRef: any = useRef(null);
+  const videoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
     if (videoRef.current) {

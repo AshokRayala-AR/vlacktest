@@ -27,7 +27,7 @@ function WhatsappComp() {
   return (
     <div className="relative">
       <button
-        className="w-16 h-16 bg-[#f87005] rounded-full p-2 fixed bottom-0 right-0"
+        className="w-16 h-16  rounded-full p-1 fixed bottom-2 right-1"
         onClick={toggleScreen}
       >
         <img src={wp} alt="wp" />
@@ -35,27 +35,27 @@ function WhatsappComp() {
 
       <div
         ref={screenRef}
-        className="w-[22%] h-[400px] sm:min-w-[320px] rounded-2xl shadow-2xl fixed bottom-20 right-2 bg-white"
+        className="w-[22%] h-[400px] sm:min-w-[320px] min-w-[280px] rounded-2xl shadow-2xl fixed bottom-20 right-2 bg-slate-100"
         style={{ display: "block" }} 
       >
         <button
-          className="absolute right-2 rounded-full w-6 h-6 text-red-500 bg-white flex items-center justify-center"
+          className="absolute right-2 top-5 rounded-full w-5 h-5 text-red-500 bg-white text-center flex items-end justify-center"
           onClick={closeScreen}
         >
-          &times;
+         <span className="">&times;</span> 
         </button>
-        <div className="h-1/6 bg-[#128483] flex justify-start items-center gap-2 rounded-t-2xl px-2">
-          <div className="w-14 h-14 relative bg-white rounded-full flex justify-center items-center">
+        <div className="h-1/6 bg-slate-100 text-black flex justify-start items-center gap-2 rounded-t-2xl px-2">
+          <div className="w-12 h-12 relative bg-[#141414] rounded-full flex justify-center items-center">
             <img
               src={logovlack}
               alt="logovlack"
-              className="w-12 h-12 mr-2 object-contain"
+              className="w-10 h-10 mr-2 object-contain"
             />
             <div className="absolute bottom-1 right-0 w-3 h-3 rounded-full bg-[#24d464]"></div>
           </div>
-          <div className="flex flex-col justify-start items-start text-white">
-            <p className="font-medium text-lg">Vlack Solutions</p>
-            <p className="font-normal text-sm">
+          <div className="flex flex-col justify-start items-start text-black">
+            <p className="font-medium text-md">Vlack Solutions</p>
+            <p className=" text-[12px]">
               Typically replies within minutes
             </p>
           </div>
@@ -71,14 +71,14 @@ function WhatsappComp() {
           }}
         >
           <div className="relative w-5/6 p-4 bg-[#DCF8C6] rounded-lg shadow-md">
-            <p className="text-sm text-gray-800">
+            <p className="text-[14px] text-gray-800">
               Hi there! Welcome to Vlack Solutions. How can we assist you today?
             </p>
           </div>
         </div>
 
         <div className="h-1/6 w-full flex justify-center items-center p-2">
-          <button onClick={handleWhatsAppClick} className="bg-[#24d464] w-3/6 flex justify-around items-center gap-2 text-white p-2 px-4 rounded-full">
+          <button onClick={handleWhatsAppClick} className="bg-[#24d464] w-4/6 flex justify-center items-center gap-3 text-white p-2 px-4 rounded-full">
             <img src={wp} alt="wp" className="w-4 h-4" />
             <p className="font-semibold">Contact Us</p>
           </button>

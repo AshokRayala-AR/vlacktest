@@ -2,7 +2,6 @@ import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { NavIndustriesData } from "./NavIndustriesData";
 import { useState, useEffect } from "react";
-import { motion } from "framer-motion";
 
 function NavIndustriesComp() {
   const { industryName } = useParams<{ industryName: string }>();

@@ -8,7 +8,7 @@ function OurMissionPage() {
   const { t } = useTranslation();
   return (
     <motion.div
-      className=" md:flex md:flex-col md:items-center md:justify-center  md:w-full py-16"
+      className=" md:flex md:flex-col md:items-center md:justify-center  md:w-full md:py-16 py-6"
       initial="offscreen"
       whileInView="onscreen"
       viewport={{ once: true, amount: 0.1 }}
@@ -22,7 +22,7 @@ function OurMissionPage() {
           <h1 className="text-4xl bg-gradient-to-r from-[#f87005] to-[#E6C24A] bg-clip-text text-transparent tracking-wide font-medium">{t("abt-us-mis-title")}</h1>
           <p className="text-base text-slate-300">{t("abt-us-mis-desc")}</p>
         </div>
-        <div className="cover p-12 no-repeat md:w-2/6 py-10 ">
+        <div className="cover p-6 md:p-12 no-repeat md:w-2/6 py-10 ">
           <img
             src={pic3}
             className="w-full h-[250px] md:max-h-full md:w-[500px] object-cover object-center rounded-lg"
@@ -40,7 +40,7 @@ function OurMissionPage() {
           <h1 className="text-4xl bg-gradient-to-r from-[#f87005] to-[#E6C24A] bg-clip-text text-transparent tracking-wide font-medium">{t("abt-us-vis-title")}</h1>
           <p className="text-base text-slate-300">{t("abt-us-vis-desc")}</p>
         </div>
-        <div className="cover p-12 no-repeat md:w-2/6 py-10 md:order-1">
+        <div className="cover p-6 md:p-12 no-repeat md:w-2/6 py-10 md:order-1">
           <img
             src={pic4}
             className="w-full h-[250px] md:max-h-full md:w-[500px] m-auto object-cover object-center rounded-lg"

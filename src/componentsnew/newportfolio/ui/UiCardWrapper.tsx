@@ -1,10 +1,8 @@
 import { UiData } from "./UiData";
 import UiCard from "./UiCard";
-import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
 import { cardVariants } from "../../../utils/scrolls/Scroll";
 export default function UiCardWrapper() {
-  const { t } = useTranslation();
   return (
     <motion.div
       className="flex flex-col w-full gap-4"

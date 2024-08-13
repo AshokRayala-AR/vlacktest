@@ -19,7 +19,7 @@ export default function AllCard({ item }: { item: PortfolioType }) {
       <div className="">
         <motion.img
           variants={cardVariants}
-          className=" border-x-[39px] border-y-[30px] max-w-[90vw] md:max-w-[60vw]"
+          className=" border-x-[39px] border-y-[30px] max-w-[80vw] md:max-w-[60vw]"
           style={{
             borderImage: `${item.border}`,
           }}
