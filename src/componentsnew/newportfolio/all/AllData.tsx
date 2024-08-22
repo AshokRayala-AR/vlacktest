@@ -5,7 +5,7 @@ import portfolioimg3 from "../../../assets/images/aveation.jpg";
 const AllData = [
   {
     img: portfolioimg1,
-    title: "BOXON",
+    title: "WareHouse Management",
     description: "The Data Warehouse Management System (DWMS) project is designed to handle and manage a comprehensive data architecture that supports hub zones, customer accounts, packages, payments, shipments tracked by drivers,  third-party carriers, orders, and transactions.This system aims to provide efficient data management, reporting, and analytics capabilities to enhance business operations"
 ,
     view: "prtfl-link",
@@ -14,7 +14,7 @@ const AllData = [
   },
   {
     img: portfolioimg2,
-    title: "MEDALLION",
+    title: "Strategy Building",
     description: "An advanced stock market algorithm designed to execute multiple trading strategies for derivatives on the NSE, utilizing sophisticated signal processing for optimal trading decisions.",
     view: "prtfl-link",
     link: "srigruhafoods.in",
