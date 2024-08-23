@@ -2,7 +2,7 @@ import pic3 from "../../../assets/images/pic3.png";
 import pic4 from "../../../assets/images/pic4.png";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-import { cardVariants } from "../../../utils/scrolls/Scroll";
+import { cardVariants, imageVariantsFromRight,imageVariants } from "../../../utils/scrolls/Scroll";
 
 function OurMissionPage() {
   const { t } = useTranslation();
@@ -23,8 +23,12 @@ function OurMissionPage() {
           <p className="text-base text-slate-300">{t("abt-us-mis-desc")}</p>
         </div>
         <div className="cover p-6 md:p-12 no-repeat md:w-2/6 py-10 ">
-          <img
+          <motion.img
             src={pic3}
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={imageVariantsFromRight}
             className="w-full h-[250px] md:max-h-full md:w-[500px] object-cover object-center rounded-lg"
             alt="pic3"
           />
@@ -41,8 +45,12 @@ function OurMissionPage() {
           <p className="text-base text-slate-300">{t("abt-us-vis-desc")}</p>
         </div>
         <div className="cover p-6 md:p-12 no-repeat md:w-2/6 py-10 md:order-1">
-          <img
+          <motion.img
             src={pic4}
+            initial="offscreen"
+            whileInView="onscreen"
+            viewport={{ once: true, amount: 0.2 }}
+            variants={imageVariants}
             className="w-full h-[250px] md:max-h-full md:w-[500px] m-auto object-cover object-center rounded-lg"
             alt="pic4"
           />

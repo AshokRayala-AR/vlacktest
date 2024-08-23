@@ -3,7 +3,7 @@ import { ServicesData } from "./ServicesData";
 import { ServicesMenuData } from "./ServicesData";
 import { useTranslation } from "react-i18next";
 import { motion } from "framer-motion";
-
+import { cardVariants } from "../../../utils/scrolls/Scroll.tsx";
 function ServicesComp() {
   const { t } = useTranslation();
   const [index, setIndex] = useState(0);
@@ -22,14 +22,28 @@ function ServicesComp() {
   function handleReadMoreClick() {}
 
   return (
-    <div className="bg-[#080808] lg:flex-row flex flex-col w-full lg:h-[120vh] md:p-14 p-2 lg:py-28 md:p-16 p-6">
+    <motion.div
+      className="bg-[#080808] lg:flex-row flex flex-col w-full lg:h-[120vh] md:p-14 p-2 lg:py-28 md:p-16 p-6"
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0.2 }}
+    >
       <div className="flex flex-col lg:w-2/6 gap-8 ">
         <h1 className=" text-4xl  bg-gradient-to-r from-[#f87005] to-[#E6C24A] bg-clip-text text-transparent tracking-wide font-medium">
           Services
         </h1>
-        <div className="flex flex-col w-full text-md">
+        <motion.div
+          className="flex flex-col w-full text-md"
+          initial="offscreen"
+          whileInView="onscreen"
+          viewport={{ once: true, amount: 0.2 }}
+        >
           {ServicesMenuData.map((item, idx) => (
-            <div key={idx} className="flex justify-start ">
+            <motion.div
+              key={idx}
+              className="flex justify-start "
+              variants={cardVariants}
+            >
               <p
                 onClick={() => handleClick(idx)}
                 className={`cursor-pointer  md:p-3 p-2 rounded-md ${
@@ -40,12 +54,18 @@ function ServicesComp() {
               >
                 {t(`${item.title}`)}
               </p>
-            </div>
+            </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
 
-      <div className="flex flex-row md:grid md:grid-cols-2 md:gap-12 gap-6 lg:w-5/6  p-2 py-10 overflow-x-auto sm:overflow-y-auto  hide-scrollbar">
+      <motion.div
+        className="flex flex-row md:grid md:grid-cols-2 md:gap-12 gap-6 lg:w-5/6  p-2 py-10 overflow-x-auto sm:overflow-y-auto  hide-scrollbar"
+        initial="offscreen"
+        whileInView="onscreen"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={cardVariants}
+      >
         {selectedIndex.map((item, idx) => (
           <div
             key={idx}
@@ -65,7 +85,11 @@ function ServicesComp() {
               }}
               transition={{ type: "spring", stiffness: 100, duration: 0.3 }}
             >
-              <img src={item.img} alt="svg" className="md:max-w-16 md:max-h-16  max-w-12" />
+              <img
+                src={item.img}
+                alt="svg"
+                className="md:max-w-16 md:max-h-16  max-w-12"
+              />
             </motion.div>
 
             <div className="flex flex-col md:mt-14 mt-10 gap-4 tracking-wide md:pt-8 pt-2">
@@ -89,8 +113,8 @@ function ServicesComp() {
             </div>
           </div>
         ))}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }
 

@@ -1,10 +1,17 @@
 import thankYouImage from "../../../assets/images/thankyou.jpg";
-
+import {motion} from 'framer-motion';
+import { cardVariants } from "../../../utils/scrolls/Scroll";
 import { OurTeamData } from "./OurTeamData";
 
 export default function ThankYouComp() {
   return (
-    <div className="md:h-[100vh] md:bg-[#141414] py-24 md:py-18 lg:py-16 md:flex-row justify-center items-center flex flex-col">
+    <motion.div
+      className="md:h-[100vh] md:bg-[#141414] py-24 md:py-18 lg:py-16 md:flex-row justify-center items-center flex flex-col"
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0.1 }}
+      variants={cardVariants}
+    >
       <div className="h-full md:w-[40vw] flex justify-center items-center">
         <div className="bg-[#f87005] rounded-full">
           <img
@@ -23,7 +30,7 @@ export default function ThankYouComp() {
           who are dedicated to driving innovation and excellence in every
           project we undertake.
         </p>
-        <div className="mt-6 flex flex-col justify-between items-center lg:flex-row gap-5 w-full">
+        <motion.div className="mt-6 flex flex-col justify-between items-center lg:flex-row gap-5 w-full"variants={cardVariants}>
           <div className=" flex flex-col   text-white tracking-wide backdrop-blur-lg bg-opacity-20 hover:bg-opacity-30 rounded-2xl shadow-md shadow-[#f87005] xl:px-8">
             <div className=" flex flex-col w-full p-6">
               <div className="flex  flex-col justify-center items-center gap-2 ">
@@ -49,8 +56,8 @@ export default function ThankYouComp() {
               </div>
             ))}
           </div>
-        </div>
+        </motion.div>
       </div>
-    </div>
+    </motion.div>
   );
 }

@@ -2,15 +2,23 @@ import { useEffect, useState } from "react";
 import { IndustriesData } from "./IndustriesData";
 import { IndustriesIdData } from "./IndustriesData";
 import { useTranslation } from "react-i18next";
+import { motion } from "framer-motion";
+import { cardVariants, imageVariants } from "../../../utils/scrolls/Scroll";
 
 function IndustriesComp() {
   const [index, setIndex] = useState(0);
   const [selectedIndex, setSelectedIndex] = useState(IndustriesData[0]);
   const { t } = useTranslation();
+  const [uniqueKey, setUniqueKey] = useState(Date.now());
 
   useEffect(() => {
     setSelectedIndex(IndustriesData[index]);
+    setUniqueKey(Date.now());
   }, [index]);
+
+  useEffect(() => {
+    setUniqueKey(Date.now());
+  }, []);
 
   const handleClick = (clickedIndex: number) => {
     setIndex(clickedIndex);
@@ -19,9 +27,13 @@ function IndustriesComp() {
   const backgroundColor = IndustriesIdData[index].color;
 
   return (
-    <div
+    <motion.div
       className="bg-[#FFf] flex flex-col justify-center items-center gap-12 p-8 min-h-screen max-w-screen overflow-hidden"
       style={{ backgroundColor }}
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={cardVariants}
     >
       <div className="flex flex-col gap-6 w-full">
         <h1 className="text-4xl bg-gradient-to-r from-[#f87005] to-[#E6C24A] bg-clip-text text-transparent tracking-wide font-medium self-start">
@@ -46,11 +58,22 @@ function IndustriesComp() {
         </div>
       </div>
 
-      <div className="w-full">
+      <motion.div className="w-full">
         {selectedIndex.map((item, idx) => (
-          <div key={idx} className="min-w-full flex flex-col lg:flex-row lg:items-start gap-14 lg:px-20 md:px-8">
+          <div
+            key={idx}
+            className="min-w-full flex flex-col lg:flex-row lg:items-start gap-14 lg:px-20 md:px-8"
+          >
             <div className="flex justify-center items-center w-full lg:w-3/6">
-              <img src={item.img} alt="" className="md:h-80 max-h-46" />
+              <motion.img
+                src={item.img}
+                alt=""
+                className="md:h-80 max-h-46"
+                variants={imageVariants}
+                initial="offscreen"
+                animate="onscreen"
+                key={`${item.img}-${uniqueKey}`} // Update key to force re-render
+              />
             </div>
 
             <div className="flex flex-col justify-center gap-6 lg:w-3/6 ">
@@ -91,8 +114,8 @@ function IndustriesComp() {
             </div>
           </div>
         ))}
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   );
 }
 

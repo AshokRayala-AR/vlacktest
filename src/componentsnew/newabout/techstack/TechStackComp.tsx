@@ -3,7 +3,7 @@ import { TechStackNavData } from "./TechStackData";
 import { TechstackData } from "./TechStackData";
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-
+import { cardVariants } from "../../../utils/scrolls/Scroll";
 function TechStackComp() {
   const { t } = useTranslation();
   const [index, setIndex] = useState(0);
@@ -18,7 +18,13 @@ function TechStackComp() {
   };
 
   return (
-    <div className="h-full max-w-screen bg-black flex flex-col gap-12 p-8 md:p-24 overflow-hidden">
+    <motion.div
+      className="h-full max-w-screen bg-black flex flex-col gap-12 p-8 md:p-24 overflow-hidden"
+      initial="offscreen"
+      whileInView="onscreen"
+      viewport={{ once: true, amount: 0.1 }}
+      variants={cardVariants}
+    >
       <div className="flex flex-col justify-center items-center gap-8">
         <p className="bg-gradient-to-r from-[#f87005] to-[#ecbe28] bg-clip-text text-transparent tracking-wider text-4xl font-semibold">
           {t("ts-headline")}
@@ -77,7 +83,7 @@ function TechStackComp() {
           ))}
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 
