@@ -97,3 +97,15 @@ export const navSchema = z.object({
 });
 
 export type NavTypes = z.infer<typeof navSchema>;
+
+export interface SlidesItem {
+  img: string;
+  title: string;
+  content: string;
+}
+
+export interface NavListItem {
+  navLink: string;
+  route: string;
+  childNav?: string[];
+}
